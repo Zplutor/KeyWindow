@@ -1,0 +1,692 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B71A35301AFA5F2500424E50 /* ZAFWindowLayoutView.m in Sources */ = {isa = PBXBuildFile; fileRef = B71A352F1AFA5F2500424E50 /* ZAFWindowLayoutView.m */; };
+		B71A35361AFA602B00424E50 /* ZAFWindowView.mm in Sources */ = {isa = PBXBuildFile; fileRef = B71A35351AFA602B00424E50 /* ZAFWindowView.mm */; };
+		B71A353C1AFDDB0B00424E50 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B71A353B1AFDDB0B00424E50 /* Images.xcassets */; };
+		B7696E131B0B924B009203FC /* ZAFLocalization.m in Sources */ = {isa = PBXBuildFile; fileRef = B7696E121B0B924B009203FC /* ZAFLocalization.m */; };
+		B77E1AE81AED37D100E39BB4 /* ShortcutRecorder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B77E1AE71AED362500E39BB4 /* ShortcutRecorder.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		B788AA041AE2962D00D635D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA021AE2962D00D635D2 /* main.m */; };
+		B788AA3B1AE3A8F400D635D2 /* ZAFRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = B788AA3A1AE3A8F400D635D2 /* ZAFRuntime.mm */; };
+		B788AA3E1AE3A99600D635D2 /* ZAFHotKeyManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = B788AA3D1AE3A99600D635D2 /* ZAFHotKeyManager.mm */; };
+		B788AA411AE3B0A600D635D2 /* ZAFEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA401AE3B0A600D635D2 /* ZAFEvents.m */; };
+		B788AA441AE3B47200D635D2 /* ZAFWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA431AE3B47200D635D2 /* ZAFWindowManager.m */; };
+		B788AA5D1AE3B82D00D635D2 /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA571AE3B82D00D635D2 /* PTHotKey.m */; };
+		B788AA5E1AE3B82D00D635D2 /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA591AE3B82D00D635D2 /* PTHotKeyCenter.m */; };
+		B788AA601AE3B82D00D635D2 /* PTKeyCombo.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA5C1AE3B82D00D635D2 /* PTKeyCombo.m */; };
+		B788AA7F1AE3BAED00D635D2 /* ZAFAxApplicationObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA761AE3BAED00D635D2 /* ZAFAxApplicationObject.m */; };
+		B788AA801AE3BAED00D635D2 /* ZAFAxObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA781AE3BAED00D635D2 /* ZAFAxObject.m */; };
+		B788AA811AE3BAED00D635D2 /* ZAFAxService.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA7A1AE3BAED00D635D2 /* ZAFAxService.m */; };
+		B788AA821AE3BAED00D635D2 /* ZAFAxSystemWideObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA7C1AE3BAED00D635D2 /* ZAFAxSystemWideObject.m */; };
+		B788AA831AE3BAED00D635D2 /* ZAFAxWindowObject.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA7E1AE3BAED00D635D2 /* ZAFAxWindowObject.m */; };
+		B788AA861AE5596900D635D2 /* ZAFApplicationDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B788AA851AE5596900D635D2 /* ZAFApplicationDelegate.mm */; };
+		B788AA8F1AE69CA100D635D2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B788AA8D1AE69CA100D635D2 /* MainWindow.xib */; };
+		B788AA921AE69CDC00D635D2 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = B788AA901AE69CDC00D635D2 /* Application.xib */; };
+		B788AA951AE69D5100D635D2 /* ZAFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA941AE69D5100D635D2 /* ZAFMainWindowController.m */; };
+		B788AA991AE7CFED00D635D2 /* ZAFLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA981AE7CFED00D635D2 /* ZAFLayoutItem.m */; };
+		B788AA9C1AE7D07300D635D2 /* ZAFHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA9B1AE7D07300D635D2 /* ZAFHotKey.m */; };
+		B788AA9F1AE7D13300D635D2 /* ZAFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA9E1AE7D13300D635D2 /* ZAFFrame.m */; };
+		B788AAA31AE7D75600D635D2 /* ZAFLayoutItemStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AAA21AE7D75600D635D2 /* ZAFLayoutItemStorage.m */; };
+		B79D860B1B073B6900DC03FA /* ZAFAlignmentLinesView.m in Sources */ = {isa = PBXBuildFile; fileRef = B79D860A1B073B6900DC03FA /* ZAFAlignmentLinesView.m */; };
+		B79D86191B0A3B4300DC03FA /* KeyWindow.strings in Resources */ = {isa = PBXBuildFile; fileRef = B79D86171B0A3B4300DC03FA /* KeyWindow.strings */; };
+		B7B46BBB1AEE5A5200B66654 /* ShortcutRecorder.framework in Copy Files */ = {isa = PBXBuildFile; fileRef = B77E1AE71AED362500E39BB4 /* ShortcutRecorder.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		B7B46BC41AEFBBF600B66654 /* ZAFPreference.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7B46BC31AEFBBF600B66654 /* ZAFPreference.mm */; };
+		B7B46BC81AF0C62700B66654 /* ZAFUINotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B46BC71AF0C62700B66654 /* ZAFUINotifications.m */; };
+		B7B46BD21AF0D68200B66654 /* ZAFLoginItemService.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7B46BD11AF0D68200B66654 /* ZAFLoginItemService.mm */; };
+		B7B46BD51AF0DA4F00B66654 /* ZAFLoginItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B46BD41AF0DA4F00B66654 /* ZAFLoginItem.m */; };
+		B7CF7F661AEB541D00C48EC1 /* LayoutItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CF7F641AEB541D00C48EC1 /* LayoutItemView.xib */; };
+		B7FE2DF31AEB5E090051E805 /* ZAFLayoutItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FE2DF21AEB5E090051E805 /* ZAFLayoutItemViewController.m */; };
+		B7FE2DFE1AEB770A0051E805 /* LayoutItemListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FE2DFC1AEB770A0051E805 /* LayoutItemListView.xib */; };
+		B7FE2E021AEB78980051E805 /* ZAFLayoutItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FE2E011AEB78980051E805 /* ZAFLayoutItemListViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B77E1AE61AED362500E39BB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B77E1AE21AED362500E39BB4 /* ShortcutRecorder.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 939837800DA42965007F53F3;
+			remoteInfo = ShortcutRecorder.framework;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		B7B46BB91AEE5A4100B66654 /* Copy Files */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				B7B46BBB1AEE5A5200B66654 /* ShortcutRecorder.framework in Copy Files */,
+			);
+			name = "Copy Files";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		B71A352E1AFA5F2500424E50 /* ZAFWindowLayoutView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFWindowLayoutView.h; path = Source/UI/WindowLayoutView/ZAFWindowLayoutView.h; sourceTree = "<group>"; };
+		B71A352F1AFA5F2500424E50 /* ZAFWindowLayoutView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFWindowLayoutView.m; path = Source/UI/WindowLayoutView/ZAFWindowLayoutView.m; sourceTree = "<group>"; };
+		B71A35341AFA602B00424E50 /* ZAFWindowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFWindowView.h; path = Source/UI/WindowLayoutView/ZAFWindowView.h; sourceTree = "<group>"; };
+		B71A35351AFA602B00424E50 /* ZAFWindowView.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFWindowView.mm; path = Source/UI/WindowLayoutView/ZAFWindowView.mm; sourceTree = "<group>"; };
+		B71A353B1AFDDB0B00424E50 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = Resource/Images.xcassets; sourceTree = "<group>"; };
+		B7696DDC1B0A3BA5009203FC /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Resource/Base.lproj/KeyWindow.strings; sourceTree = "<group>"; };
+		B7696E111B0B924B009203FC /* ZAFLocalization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLocalization.h; path = Source/UI/ZAFLocalization.h; sourceTree = "<group>"; };
+		B7696E121B0B924B009203FC /* ZAFLocalization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLocalization.m; path = Source/UI/ZAFLocalization.m; sourceTree = "<group>"; };
+		B77E1AE21AED362500E39BB4 /* ShortcutRecorder.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ShortcutRecorder.xcodeproj; path = ThirdParty/ShortcutRecorder/ShortcutRecorder.xcodeproj; sourceTree = "<group>"; };
+		B788A9D81AE2957200D635D2 /* KeyWindow.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = KeyWindow.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B788AA021AE2962D00D635D2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = Source/main.m; sourceTree = "<group>"; };
+		B788AA091AE2966000D635D2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resource/Info.plist; sourceTree = "<group>"; };
+		B788AA391AE3A8F400D635D2 /* ZAFRuntime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFRuntime.h; path = Source/Runtime/ZAFRuntime.h; sourceTree = "<group>"; };
+		B788AA3A1AE3A8F400D635D2 /* ZAFRuntime.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFRuntime.mm; path = Source/Runtime/ZAFRuntime.mm; sourceTree = "<group>"; };
+		B788AA3C1AE3A99600D635D2 /* ZAFHotKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFHotKeyManager.h; path = Source/Runtime/HotKey/ZAFHotKeyManager.h; sourceTree = "<group>"; };
+		B788AA3D1AE3A99600D635D2 /* ZAFHotKeyManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFHotKeyManager.mm; path = Source/Runtime/HotKey/ZAFHotKeyManager.mm; sourceTree = "<group>"; };
+		B788AA3F1AE3B0A600D635D2 /* ZAFEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFEvents.h; path = Source/Runtime/ZAFEvents.h; sourceTree = "<group>"; };
+		B788AA401AE3B0A600D635D2 /* ZAFEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFEvents.m; path = Source/Runtime/ZAFEvents.m; sourceTree = "<group>"; };
+		B788AA421AE3B47200D635D2 /* ZAFWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFWindowManager.h; path = Source/Runtime/Window/ZAFWindowManager.h; sourceTree = "<group>"; };
+		B788AA431AE3B47200D635D2 /* ZAFWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFWindowManager.m; path = Source/Runtime/Window/ZAFWindowManager.m; sourceTree = "<group>"; };
+		B788AA561AE3B82D00D635D2 /* PTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTHotKey.h; path = ThirdParty/PTHotKey/PTHotKey.h; sourceTree = "<group>"; };
+		B788AA571AE3B82D00D635D2 /* PTHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTHotKey.m; path = ThirdParty/PTHotKey/PTHotKey.m; sourceTree = "<group>"; };
+		B788AA581AE3B82D00D635D2 /* PTHotKeyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTHotKeyCenter.h; path = ThirdParty/PTHotKey/PTHotKeyCenter.h; sourceTree = "<group>"; };
+		B788AA591AE3B82D00D635D2 /* PTHotKeyCenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTHotKeyCenter.m; path = ThirdParty/PTHotKey/PTHotKeyCenter.m; sourceTree = "<group>"; };
+		B788AA5B1AE3B82D00D635D2 /* PTKeyCombo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTKeyCombo.h; path = ThirdParty/PTHotKey/PTKeyCombo.h; sourceTree = "<group>"; };
+		B788AA5C1AE3B82D00D635D2 /* PTKeyCombo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PTKeyCombo.m; path = ThirdParty/PTHotKey/PTKeyCombo.m; sourceTree = "<group>"; };
+		B788AA751AE3BAED00D635D2 /* ZAFAxApplicationObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFAxApplicationObject.h; path = Source/Utility/AxService/ZAFAxApplicationObject.h; sourceTree = "<group>"; };
+		B788AA761AE3BAED00D635D2 /* ZAFAxApplicationObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAxApplicationObject.m; path = Source/Utility/AxService/ZAFAxApplicationObject.m; sourceTree = "<group>"; };
+		B788AA771AE3BAED00D635D2 /* ZAFAxObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFAxObject.h; path = Source/Utility/AxService/ZAFAxObject.h; sourceTree = "<group>"; };
+		B788AA781AE3BAED00D635D2 /* ZAFAxObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAxObject.m; path = Source/Utility/AxService/ZAFAxObject.m; sourceTree = "<group>"; };
+		B788AA791AE3BAED00D635D2 /* ZAFAxService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFAxService.h; path = Source/Utility/AxService/ZAFAxService.h; sourceTree = "<group>"; };
+		B788AA7A1AE3BAED00D635D2 /* ZAFAxService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAxService.m; path = Source/Utility/AxService/ZAFAxService.m; sourceTree = "<group>"; };
+		B788AA7B1AE3BAED00D635D2 /* ZAFAxSystemWideObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFAxSystemWideObject.h; path = Source/Utility/AxService/ZAFAxSystemWideObject.h; sourceTree = "<group>"; };
+		B788AA7C1AE3BAED00D635D2 /* ZAFAxSystemWideObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAxSystemWideObject.m; path = Source/Utility/AxService/ZAFAxSystemWideObject.m; sourceTree = "<group>"; };
+		B788AA7D1AE3BAED00D635D2 /* ZAFAxWindowObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFAxWindowObject.h; path = Source/Utility/AxService/ZAFAxWindowObject.h; sourceTree = "<group>"; };
+		B788AA7E1AE3BAED00D635D2 /* ZAFAxWindowObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAxWindowObject.m; path = Source/Utility/AxService/ZAFAxWindowObject.m; sourceTree = "<group>"; };
+		B788AA841AE5596900D635D2 /* ZAFApplicationDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFApplicationDelegate.h; path = Source/UI/ZAFApplicationDelegate.h; sourceTree = "<group>"; };
+		B788AA851AE5596900D635D2 /* ZAFApplicationDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFApplicationDelegate.mm; path = Source/UI/ZAFApplicationDelegate.mm; sourceTree = "<group>"; };
+		B788AA8E1AE69CA100D635D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/MainWindow.xib; sourceTree = "<group>"; };
+		B788AA911AE69CDC00D635D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/Application.xib; sourceTree = "<group>"; };
+		B788AA931AE69D5100D635D2 /* ZAFMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFMainWindowController.h; path = Source/UI/ZAFMainWindowController.h; sourceTree = "<group>"; };
+		B788AA941AE69D5100D635D2 /* ZAFMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFMainWindowController.m; path = Source/UI/ZAFMainWindowController.m; sourceTree = "<group>"; };
+		B788AA971AE7CFED00D635D2 /* ZAFLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutItem.h; path = Source/Model/ZAFLayoutItem.h; sourceTree = "<group>"; };
+		B788AA981AE7CFED00D635D2 /* ZAFLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutItem.m; path = Source/Model/ZAFLayoutItem.m; sourceTree = "<group>"; };
+		B788AA9A1AE7D07300D635D2 /* ZAFHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFHotKey.h; path = Source/Model/ZAFHotKey.h; sourceTree = "<group>"; };
+		B788AA9B1AE7D07300D635D2 /* ZAFHotKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFHotKey.m; path = Source/Model/ZAFHotKey.m; sourceTree = "<group>"; };
+		B788AA9D1AE7D13300D635D2 /* ZAFFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFFrame.h; path = Source/Model/ZAFFrame.h; sourceTree = "<group>"; };
+		B788AA9E1AE7D13300D635D2 /* ZAFFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFFrame.m; path = Source/Model/ZAFFrame.m; sourceTree = "<group>"; };
+		B788AAA11AE7D75600D635D2 /* ZAFLayoutItemStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutItemStorage.h; path = Source/Storage/ZAFLayoutItemStorage.h; sourceTree = "<group>"; };
+		B788AAA21AE7D75600D635D2 /* ZAFLayoutItemStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutItemStorage.m; path = Source/Storage/ZAFLayoutItemStorage.m; sourceTree = "<group>"; };
+		B79D86091B073B6900DC03FA /* ZAFAlignmentLinesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFAlignmentLinesView.h; path = Source/UI/WindowLayoutView/ZAFAlignmentLinesView.h; sourceTree = "<group>"; };
+		B79D860A1B073B6900DC03FA /* ZAFAlignmentLinesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAlignmentLinesView.m; path = Source/UI/WindowLayoutView/ZAFAlignmentLinesView.m; sourceTree = "<group>"; };
+		B79D86131B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/Application.strings"; sourceTree = "<group>"; };
+		B79D86141B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/MainWindow.strings"; sourceTree = "<group>"; };
+		B79D86151B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/LayoutItemView.strings"; sourceTree = "<group>"; };
+		B79D86161B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/LayoutItemListView.strings"; sourceTree = "<group>"; };
+		B79D86181B0A3B4300DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/KeyWindow.strings"; sourceTree = "<group>"; };
+		B7B46BC21AEFBBF600B66654 /* ZAFPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFPreference.h; path = Source/UI/Preference/ZAFPreference.h; sourceTree = "<group>"; };
+		B7B46BC31AEFBBF600B66654 /* ZAFPreference.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFPreference.mm; path = Source/UI/Preference/ZAFPreference.mm; sourceTree = "<group>"; };
+		B7B46BC61AF0C62700B66654 /* ZAFUINotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFUINotifications.h; path = Source/UI/ZAFUINotifications.h; sourceTree = "<group>"; };
+		B7B46BC71AF0C62700B66654 /* ZAFUINotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFUINotifications.m; path = Source/UI/ZAFUINotifications.m; sourceTree = "<group>"; };
+		B7B46BD01AF0D68200B66654 /* ZAFLoginItemService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLoginItemService.h; path = Source/Utility/LoginItemService/ZAFLoginItemService.h; sourceTree = "<group>"; };
+		B7B46BD11AF0D68200B66654 /* ZAFLoginItemService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFLoginItemService.mm; path = Source/Utility/LoginItemService/ZAFLoginItemService.mm; sourceTree = "<group>"; };
+		B7B46BD31AF0DA4F00B66654 /* ZAFLoginItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLoginItem.h; path = Source/Utility/LoginItemService/ZAFLoginItem.h; sourceTree = "<group>"; };
+		B7B46BD41AF0DA4F00B66654 /* ZAFLoginItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLoginItem.m; path = Source/Utility/LoginItemService/ZAFLoginItem.m; sourceTree = "<group>"; };
+		B7CF7F651AEB541D00C48EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/LayoutItemView.xib; sourceTree = "<group>"; };
+		B7FE2DF11AEB5E090051E805 /* ZAFLayoutItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutItemViewController.h; path = Source/UI/LayoutItemView/ZAFLayoutItemViewController.h; sourceTree = "<group>"; };
+		B7FE2DF21AEB5E090051E805 /* ZAFLayoutItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutItemViewController.m; path = Source/UI/LayoutItemView/ZAFLayoutItemViewController.m; sourceTree = "<group>"; };
+		B7FE2DFD1AEB770A0051E805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/LayoutItemListView.xib; sourceTree = "<group>"; };
+		B7FE2E001AEB78980051E805 /* ZAFLayoutItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutItemListViewController.h; path = Source/UI/LayoutItemListView/ZAFLayoutItemListViewController.h; sourceTree = "<group>"; };
+		B7FE2E011AEB78980051E805 /* ZAFLayoutItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutItemListViewController.m; path = Source/UI/LayoutItemListView/ZAFLayoutItemListViewController.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B788A9D51AE2957200D635D2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B77E1AE81AED37D100E39BB4 /* ShortcutRecorder.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B71A352C1AFA5EB600424E50 /* WindowLayoutView */ = {
+			isa = PBXGroup;
+			children = (
+				B71A352E1AFA5F2500424E50 /* ZAFWindowLayoutView.h */,
+				B71A352F1AFA5F2500424E50 /* ZAFWindowLayoutView.m */,
+				B71A35341AFA602B00424E50 /* ZAFWindowView.h */,
+				B71A35351AFA602B00424E50 /* ZAFWindowView.mm */,
+				B79D86091B073B6900DC03FA /* ZAFAlignmentLinesView.h */,
+				B79D860A1B073B6900DC03FA /* ZAFAlignmentLinesView.m */,
+			);
+			name = WindowLayoutView;
+			sourceTree = "<group>";
+		};
+		B77E1AE31AED362500E39BB4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B77E1AE71AED362500E39BB4 /* ShortcutRecorder.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B788A9CF1AE2957200D635D2 = {
+			isa = PBXGroup;
+			children = (
+				B788A9FB1AE295B800D635D2 /* Source */,
+				B788A9FC1AE295DA00D635D2 /* Resource */,
+				B788AA551AE3B82100D635D2 /* ThirdParty */,
+				B7B46BCE1AF0D19B00B66654 /* Frameworks */,
+				B788A9D91AE2957200D635D2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B788A9D91AE2957200D635D2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B788A9D81AE2957200D635D2 /* KeyWindow.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B788A9FB1AE295B800D635D2 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA721AE3BABF00D635D2 /* UI */,
+				B788AA961AE7CFBE00D635D2 /* Model */,
+				B788AA361AE3A89F00D635D2 /* Runtime */,
+				B788AAA01AE7D72B00D635D2 /* Storage */,
+				B788AA731AE3BACA00D635D2 /* Utility */,
+				B788AA021AE2962D00D635D2 /* main.m */,
+			);
+			name = Source;
+			sourceTree = "<group>";
+		};
+		B788A9FC1AE295DA00D635D2 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA901AE69CDC00D635D2 /* Application.xib */,
+				B788AA8D1AE69CA100D635D2 /* MainWindow.xib */,
+				B7CF7F641AEB541D00C48EC1 /* LayoutItemView.xib */,
+				B7FE2DFC1AEB770A0051E805 /* LayoutItemListView.xib */,
+				B71A353B1AFDDB0B00424E50 /* Images.xcassets */,
+				B79D86171B0A3B4300DC03FA /* KeyWindow.strings */,
+				B788AA091AE2966000D635D2 /* Info.plist */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
+		B788AA361AE3A89F00D635D2 /* Runtime */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA371AE3A8B000D635D2 /* HotKey */,
+				B788AA381AE3A8B800D635D2 /* Window */,
+				B788AA391AE3A8F400D635D2 /* ZAFRuntime.h */,
+				B788AA3A1AE3A8F400D635D2 /* ZAFRuntime.mm */,
+				B788AA3F1AE3B0A600D635D2 /* ZAFEvents.h */,
+				B788AA401AE3B0A600D635D2 /* ZAFEvents.m */,
+			);
+			name = Runtime;
+			sourceTree = "<group>";
+		};
+		B788AA371AE3A8B000D635D2 /* HotKey */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA3C1AE3A99600D635D2 /* ZAFHotKeyManager.h */,
+				B788AA3D1AE3A99600D635D2 /* ZAFHotKeyManager.mm */,
+			);
+			name = HotKey;
+			sourceTree = "<group>";
+		};
+		B788AA381AE3A8B800D635D2 /* Window */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA421AE3B47200D635D2 /* ZAFWindowManager.h */,
+				B788AA431AE3B47200D635D2 /* ZAFWindowManager.m */,
+			);
+			name = Window;
+			sourceTree = "<group>";
+		};
+		B788AA551AE3B82100D635D2 /* ThirdParty */ = {
+			isa = PBXGroup;
+			children = (
+				B77E1AE21AED362500E39BB4 /* ShortcutRecorder.xcodeproj */,
+				B788AA611AE3B82F00D635D2 /* PTHotKey */,
+			);
+			name = ThirdParty;
+			sourceTree = "<group>";
+		};
+		B788AA611AE3B82F00D635D2 /* PTHotKey */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA561AE3B82D00D635D2 /* PTHotKey.h */,
+				B788AA571AE3B82D00D635D2 /* PTHotKey.m */,
+				B788AA581AE3B82D00D635D2 /* PTHotKeyCenter.h */,
+				B788AA591AE3B82D00D635D2 /* PTHotKeyCenter.m */,
+				B788AA5B1AE3B82D00D635D2 /* PTKeyCombo.h */,
+				B788AA5C1AE3B82D00D635D2 /* PTKeyCombo.m */,
+			);
+			name = PTHotKey;
+			sourceTree = "<group>";
+		};
+		B788AA721AE3BABF00D635D2 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B7FE2DFF1AEB786C0051E805 /* LayoutItemListView */,
+				B7CF7F7F1AEB5A1800C48EC1 /* LayoutItemView */,
+				B71A352C1AFA5EB600424E50 /* WindowLayoutView */,
+				B7B46BBD1AEFBBA800B66654 /* Preference */,
+				B788AA841AE5596900D635D2 /* ZAFApplicationDelegate.h */,
+				B788AA851AE5596900D635D2 /* ZAFApplicationDelegate.mm */,
+				B788AA931AE69D5100D635D2 /* ZAFMainWindowController.h */,
+				B788AA941AE69D5100D635D2 /* ZAFMainWindowController.m */,
+				B7B46BC61AF0C62700B66654 /* ZAFUINotifications.h */,
+				B7B46BC71AF0C62700B66654 /* ZAFUINotifications.m */,
+				B7696E111B0B924B009203FC /* ZAFLocalization.h */,
+				B7696E121B0B924B009203FC /* ZAFLocalization.m */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		B788AA731AE3BACA00D635D2 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA741AE3BAD400D635D2 /* AxService */,
+				B7B46BCF1AF0D64C00B66654 /* LoginItemService */,
+			);
+			name = Utility;
+			sourceTree = "<group>";
+		};
+		B788AA741AE3BAD400D635D2 /* AxService */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA791AE3BAED00D635D2 /* ZAFAxService.h */,
+				B788AA7A1AE3BAED00D635D2 /* ZAFAxService.m */,
+				B788AA771AE3BAED00D635D2 /* ZAFAxObject.h */,
+				B788AA781AE3BAED00D635D2 /* ZAFAxObject.m */,
+				B788AA7B1AE3BAED00D635D2 /* ZAFAxSystemWideObject.h */,
+				B788AA7C1AE3BAED00D635D2 /* ZAFAxSystemWideObject.m */,
+				B788AA751AE3BAED00D635D2 /* ZAFAxApplicationObject.h */,
+				B788AA761AE3BAED00D635D2 /* ZAFAxApplicationObject.m */,
+				B788AA7D1AE3BAED00D635D2 /* ZAFAxWindowObject.h */,
+				B788AA7E1AE3BAED00D635D2 /* ZAFAxWindowObject.m */,
+			);
+			name = AxService;
+			sourceTree = "<group>";
+		};
+		B788AA961AE7CFBE00D635D2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				B788AA9A1AE7D07300D635D2 /* ZAFHotKey.h */,
+				B788AA9B1AE7D07300D635D2 /* ZAFHotKey.m */,
+				B788AA9D1AE7D13300D635D2 /* ZAFFrame.h */,
+				B788AA9E1AE7D13300D635D2 /* ZAFFrame.m */,
+				B788AA971AE7CFED00D635D2 /* ZAFLayoutItem.h */,
+				B788AA981AE7CFED00D635D2 /* ZAFLayoutItem.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		B788AAA01AE7D72B00D635D2 /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				B788AAA11AE7D75600D635D2 /* ZAFLayoutItemStorage.h */,
+				B788AAA21AE7D75600D635D2 /* ZAFLayoutItemStorage.m */,
+			);
+			name = Storage;
+			sourceTree = "<group>";
+		};
+		B7B46BBD1AEFBBA800B66654 /* Preference */ = {
+			isa = PBXGroup;
+			children = (
+				B7B46BC21AEFBBF600B66654 /* ZAFPreference.h */,
+				B7B46BC31AEFBBF600B66654 /* ZAFPreference.mm */,
+			);
+			name = Preference;
+			sourceTree = "<group>";
+		};
+		B7B46BCE1AF0D19B00B66654 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B7B46BCF1AF0D64C00B66654 /* LoginItemService */ = {
+			isa = PBXGroup;
+			children = (
+				B7B46BD01AF0D68200B66654 /* ZAFLoginItemService.h */,
+				B7B46BD11AF0D68200B66654 /* ZAFLoginItemService.mm */,
+				B7B46BD31AF0DA4F00B66654 /* ZAFLoginItem.h */,
+				B7B46BD41AF0DA4F00B66654 /* ZAFLoginItem.m */,
+			);
+			name = LoginItemService;
+			sourceTree = "<group>";
+		};
+		B7CF7F7F1AEB5A1800C48EC1 /* LayoutItemView */ = {
+			isa = PBXGroup;
+			children = (
+				B7FE2DF11AEB5E090051E805 /* ZAFLayoutItemViewController.h */,
+				B7FE2DF21AEB5E090051E805 /* ZAFLayoutItemViewController.m */,
+			);
+			name = LayoutItemView;
+			sourceTree = "<group>";
+		};
+		B7FE2DFF1AEB786C0051E805 /* LayoutItemListView */ = {
+			isa = PBXGroup;
+			children = (
+				B7FE2E001AEB78980051E805 /* ZAFLayoutItemListViewController.h */,
+				B7FE2E011AEB78980051E805 /* ZAFLayoutItemListViewController.m */,
+			);
+			name = LayoutItemListView;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B788A9D71AE2957200D635D2 /* KeyWindow */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B788A9F51AE2957200D635D2 /* Build configuration list for PBXNativeTarget "KeyWindow" */;
+			buildPhases = (
+				B788A9D41AE2957200D635D2 /* Sources */,
+				B788A9D51AE2957200D635D2 /* Frameworks */,
+				B788A9D61AE2957200D635D2 /* Resources */,
+				B7B46BB91AEE5A4100B66654 /* Copy Files */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = KeyWindow;
+			productName = QuickLayout;
+			productReference = B788A9D81AE2957200D635D2 /* KeyWindow.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B788A9D01AE2957200D635D2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = Zplutor;
+				TargetAttributes = {
+					B788A9D71AE2957200D635D2 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = B788A9D31AE2957200D635D2 /* Build configuration list for PBXProject "KeyWindow" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = B788A9CF1AE2957200D635D2;
+			productRefGroup = B788A9D91AE2957200D635D2 /* Products */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = B77E1AE31AED362500E39BB4 /* Products */;
+					ProjectRef = B77E1AE21AED362500E39BB4 /* ShortcutRecorder.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				B788A9D71AE2957200D635D2 /* KeyWindow */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		B77E1AE71AED362500E39BB4 /* ShortcutRecorder.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ShortcutRecorder.framework;
+			remoteRef = B77E1AE61AED362500E39BB4 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B788A9D61AE2957200D635D2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B788AA8F1AE69CA100D635D2 /* MainWindow.xib in Resources */,
+				B71A353C1AFDDB0B00424E50 /* Images.xcassets in Resources */,
+				B788AA921AE69CDC00D635D2 /* Application.xib in Resources */,
+				B7FE2DFE1AEB770A0051E805 /* LayoutItemListView.xib in Resources */,
+				B79D86191B0A3B4300DC03FA /* KeyWindow.strings in Resources */,
+				B7CF7F661AEB541D00C48EC1 /* LayoutItemView.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B788A9D41AE2957200D635D2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B788AA3E1AE3A99600D635D2 /* ZAFHotKeyManager.mm in Sources */,
+				B788AA5D1AE3B82D00D635D2 /* PTHotKey.m in Sources */,
+				B7B46BD21AF0D68200B66654 /* ZAFLoginItemService.mm in Sources */,
+				B788AA951AE69D5100D635D2 /* ZAFMainWindowController.m in Sources */,
+				B788AA3B1AE3A8F400D635D2 /* ZAFRuntime.mm in Sources */,
+				B788AA441AE3B47200D635D2 /* ZAFWindowManager.m in Sources */,
+				B7B46BC81AF0C62700B66654 /* ZAFUINotifications.m in Sources */,
+				B788AA9F1AE7D13300D635D2 /* ZAFFrame.m in Sources */,
+				B79D860B1B073B6900DC03FA /* ZAFAlignmentLinesView.m in Sources */,
+				B788AA811AE3BAED00D635D2 /* ZAFAxService.m in Sources */,
+				B788AA041AE2962D00D635D2 /* main.m in Sources */,
+				B7B46BC41AEFBBF600B66654 /* ZAFPreference.mm in Sources */,
+				B788AA601AE3B82D00D635D2 /* PTKeyCombo.m in Sources */,
+				B71A35301AFA5F2500424E50 /* ZAFWindowLayoutView.m in Sources */,
+				B7FE2DF31AEB5E090051E805 /* ZAFLayoutItemViewController.m in Sources */,
+				B788AA9C1AE7D07300D635D2 /* ZAFHotKey.m in Sources */,
+				B7B46BD51AF0DA4F00B66654 /* ZAFLoginItem.m in Sources */,
+				B7696E131B0B924B009203FC /* ZAFLocalization.m in Sources */,
+				B788AA991AE7CFED00D635D2 /* ZAFLayoutItem.m in Sources */,
+				B788AA5E1AE3B82D00D635D2 /* PTHotKeyCenter.m in Sources */,
+				B788AA831AE3BAED00D635D2 /* ZAFAxWindowObject.m in Sources */,
+				B788AAA31AE7D75600D635D2 /* ZAFLayoutItemStorage.m in Sources */,
+				B788AA7F1AE3BAED00D635D2 /* ZAFAxApplicationObject.m in Sources */,
+				B71A35361AFA602B00424E50 /* ZAFWindowView.mm in Sources */,
+				B7FE2E021AEB78980051E805 /* ZAFLayoutItemListViewController.m in Sources */,
+				B788AA821AE3BAED00D635D2 /* ZAFAxSystemWideObject.m in Sources */,
+				B788AA861AE5596900D635D2 /* ZAFApplicationDelegate.mm in Sources */,
+				B788AA801AE3BAED00D635D2 /* ZAFAxObject.m in Sources */,
+				B788AA411AE3B0A600D635D2 /* ZAFEvents.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		B788AA8D1AE69CA100D635D2 /* MainWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B788AA8E1AE69CA100D635D2 /* Base */,
+				B79D86141B0A378600DC03FA /* zh-Hans */,
+			);
+			name = MainWindow.xib;
+			sourceTree = "<group>";
+		};
+		B788AA901AE69CDC00D635D2 /* Application.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B788AA911AE69CDC00D635D2 /* Base */,
+				B79D86131B0A378600DC03FA /* zh-Hans */,
+			);
+			name = Application.xib;
+			sourceTree = "<group>";
+		};
+		B79D86171B0A3B4300DC03FA /* KeyWindow.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B79D86181B0A3B4300DC03FA /* zh-Hans */,
+				B7696DDC1B0A3BA5009203FC /* Base */,
+			);
+			name = KeyWindow.strings;
+			sourceTree = "<group>";
+		};
+		B7CF7F641AEB541D00C48EC1 /* LayoutItemView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7CF7F651AEB541D00C48EC1 /* Base */,
+				B79D86151B0A378600DC03FA /* zh-Hans */,
+			);
+			name = LayoutItemView.xib;
+			sourceTree = "<group>";
+		};
+		B7FE2DFC1AEB770A0051E805 /* LayoutItemListView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7FE2DFD1AEB770A0051E805 /* Base */,
+				B79D86161B0A378600DC03FA /* zh-Hans */,
+			);
+			name = LayoutItemListView.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B788A9F31AE2957200D635D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		B788A9F41AE2957200D635D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_SYMBOLS_PRIVATE_EXTERN = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		B788A9F61AE2957200D635D2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B788A9F71AE2957200D635D2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Resource/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B788A9D31AE2957200D635D2 /* Build configuration list for PBXProject "KeyWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B788A9F31AE2957200D635D2 /* Debug */,
+				B788A9F41AE2957200D635D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B788A9F51AE2957200D635D2 /* Build configuration list for PBXNativeTarget "KeyWindow" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B788A9F61AE2957200D635D2 /* Debug */,
+				B788A9F71AE2957200D635D2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B788A9D01AE2957200D635D2 /* Project object */;
+}

@@ -1,0 +1,33 @@
+
+/* Class = "NSTextFieldCell"; title = "%"; ObjectID = "9u1-Xh-JYK"; */
+"9u1-Xh-JYK.title" = "%";
+
+/* Class = "NSTextFieldCell"; title = "Width :"; ObjectID = "G5z-qn-AKH"; */
+"G5z-qn-AKH.title" = "宽 :";
+
+/* Class = "NSTextFieldCell"; title = "Y-coordinate :"; ObjectID = "N3a-MM-nCY"; */
+"N3a-MM-nCY.title" = "Y坐标 :";
+
+/* Class = "NSTextFieldCell"; title = "Height :"; ObjectID = "NWV-BS-cUK"; */
+"NWV-BS-cUK.title" = "高 :";
+
+/* Class = "NSTextFieldCell"; title = "X-coordinate :"; ObjectID = "VBx-QT-afL"; */
+"VBx-QT-afL.title" = "X坐标 :";
+
+/* Class = "NSBox"; title = "Layout"; ObjectID = "eqQ-s5-L1D"; */
+"eqQ-s5-L1D.title" = "布局";
+
+/* Class = "NSTextFieldCell"; title = "%"; ObjectID = "iFE-KE-y5P"; */
+"iFE-KE-y5P.title" = "%";
+
+/* Class = "NSTextFieldCell"; title = "%"; ObjectID = "qDa-Ha-iHc"; */
+"qDa-Ha-iHc.title" = "%";
+
+/* Class = "NSTextFieldCell"; title = "HotKey :"; ObjectID = "sjR-Vd-co9"; */
+"sjR-Vd-co9.title" = "快捷键 :";
+
+/* Class = "NSTextFieldCell"; title = "%"; ObjectID = "uDU-HG-Hwu"; */
+"uDU-HG-Hwu.title" = "%";
+
+/* Class = "NSTextFieldCell"; title = "Description :"; ObjectID = "wW6-hO-fPV"; */
+"wW6-hO-fPV.title" = "描述 :";

@@ -1,0 +1,7 @@
+"NewLayoutItemName" = "新布局";
+"EmptyLayoutItemNameDisplayText" = "( 无描述 )";
+
+
+"ConfirmDeleteLayoutItemAlertTitle" = "确定删除 \" %@ \" 吗?";
+"ConfirmDeleteLayoutItemAlertOkButtonText" = "确定";
+"ConfirmDeleteLayoutItemAlertCancelButtonText" = "取消";

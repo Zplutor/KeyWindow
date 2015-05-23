@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ZAFMainWindowController">
+            <connections>
+                <outlet property="discardLayoutItemButton" destination="cNk-DN-x88" id="Sal-pE-NaR"/>
+                <outlet property="launchAtLoginButton" destination="fKB-cw-cBo" id="FVQ-pO-YdU"/>
+                <outlet property="layoutItemListViewPlaceHolder" destination="vqf-ii-Gdc" id="N2C-GU-JYX"/>
+                <outlet property="layoutItemListViewSegmentButtons" destination="hoY-VQ-k3B" id="Lie-t0-kDF"/>
+                <outlet property="layoutItemViewPlaceHolder" destination="Osq-Un-e9o" id="Dss-xs-cdp"/>
+                <outlet property="saveLayoutItemButton" destination="liu-7M-lIS" id="S5o-9y-dMa"/>
+                <outlet property="showIconOnStatusBarButton" destination="R7v-ob-KyB" id="D7M-Qp-zH5"/>
+                <outlet property="versionLabel" destination="EHq-Xi-MKR" id="xvx-4F-A0F"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="pUG-BO-3UJ"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="KeyWindow" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" showsToolbarButton="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
+            <rect key="contentRect" x="468" y="320" width="640" height="480"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
+            <value key="minSize" type="size" width="640" height="480"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="0.0" y="0.0" width="640" height="480"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView id="vqf-ii-Gdc" userLabel="Layout Item List View Place Holder">
+                        <rect key="frame" x="20" y="86" width="200" height="370"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    </customView>
+                    <box autoresizesSubviews="NO" borderType="line" titlePosition="noTitle" id="anH-AY-4EQ">
+                        <rect key="frame" x="227" y="82" width="396" height="376"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <view key="contentView">
+                            <rect key="frame" x="1" y="1" width="394" height="374"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <customView id="Osq-Un-e9o" userLabel="Layout Item View Place Holder">
+                                    <rect key="frame" x="2" y="3" width="390" height="370"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </customView>
+                            </subviews>
+                        </view>
+                        <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                        <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </box>
+                    <button id="fKB-cw-cBo">
+                        <rect key="frame" x="20" y="20" width="117" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CH7-05-shF">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="zaf_launchAtLoginButtonClick:" target="-2" id="9PF-hC-0JJ"/>
+                        </connections>
+                    </button>
+                    <button id="R7v-ob-KyB">
+                        <rect key="frame" x="155" y="20" width="172" height="18"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="check" title="Show icon on status bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LtD-wo-hYQ">
+                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="zaf_showIconOnStatusBarButtonDidClick:" target="-2" id="804-po-V4U"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" verticalHuggingPriority="750" id="cNk-DN-x88">
+                        <rect key="frame" x="472" y="55" width="87" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Discard" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="LFB-CT-jiz">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                            <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                        </buttonCell>
+                        <connections>
+                            <action selector="discardLayoutItemButtonDidClick:" target="-2" id="8gS-lo-Hxu"/>
+                        </connections>
+                    </button>
+                    <button hidden="YES" verticalHuggingPriority="750" id="liu-7M-lIS">
+                        <rect key="frame" x="552" y="55" width="71" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Save" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="15W-1O-41X">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="saveLayoutItemButtonDidClick:" target="-2" id="moT-7s-4oy"/>
+                        </connections>
+                    </button>
+                    <button verticalHuggingPriority="750" id="EKN-xq-x7c">
+                        <rect key="frame" x="483" y="12" width="140" height="32"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <buttonCell key="cell" type="push" title="Exit KeyWindow" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GOm-39-BmC">
+                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                            <font key="font" metaFont="system"/>
+                        </buttonCell>
+                        <connections>
+                            <action selector="zaf_exitApplicationButtonDidClick:" target="-2" id="OAv-iF-hBK"/>
+                        </connections>
+                    </button>
+                    <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" id="EHq-Xi-MKR">
+                        <rect key="frame" x="340" y="21" width="134" height="17"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.1.1" usesSingleLineMode="YES" id="cAf-KK-hfz">
+                            <font key="font" metaFont="system"/>
+                            <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                            <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                        </textFieldCell>
+                    </textField>
+                    <segmentedControl verticalHuggingPriority="750" id="hoY-VQ-k3B" userLabel="Layout Item List View Buttons">
+                        <rect key="frame" x="20" y="60" width="80" height="24"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                        <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="GDX-Hm-icE">
+                            <font key="font" metaFont="system"/>
+                            <segments>
+                                <segment image="NSAddTemplate" width="24">
+                                    <nil key="label"/>
+                                </segment>
+                                <segment image="NSRemoveTemplate" width="24" enabled="NO" tag="1">
+                                    <nil key="label"/>
+                                </segment>
+                                <segment image="NSActionTemplate" width="24" enabled="NO">
+                                    <nil key="label"/>
+                                </segment>
+                            </segments>
+                        </segmentedCell>
+                        <connections>
+                            <action selector="zaf_layoutItemListViewSegmentButtonDidClick:" target="-2" id="oVK-Pq-jMk"/>
+                        </connections>
+                    </segmentedControl>
+                </subviews>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="11w-4D-lV1"/>
+            </connections>
+            <point key="canvasLocation" x="430" y="303"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+    </resources>
+</document>
