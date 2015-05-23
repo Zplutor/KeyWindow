@@ -75,10 +75,16 @@
 
 - (id)copyWithZone:(NSZone*)zone {
     
-    return [[[self class] allocWithZone:zone] initWithXPercent:_xPercent
-                                                      yPercent:_yPercent
-                                                  widthPercent:_widthPercent
-                                                 heightPercent:_heightPercent];
+    return [self mutableCopyWithZone:zone];
+}
+
+
+- (id)mutableCopyWithZone:(NSZone*)zone {
+    
+    return [[ZAFMutableFrame allocWithZone:zone] initWithXPercent:_xPercent
+                                                         yPercent:_yPercent
+                                                     widthPercent:_widthPercent
+                                                    heightPercent:_heightPercent];
 }
 
 
@@ -115,12 +121,6 @@
 - (void)setHeightPercent:(double)heightPercent {
     NSParameterAssert( (0 <= heightPercent) && (heightPercent <= 1) );
     _heightPercent = heightPercent;
-}
-
-
-- (id)mutableCopyWithZone:(NSZone*)zone {
-    
-    return [self copyWithZone:zone];
 }
 
 

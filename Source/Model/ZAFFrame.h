@@ -1,7 +1,7 @@
 #import <Foundation/Foundation.h>
 
 
-@interface ZAFFrame : NSObject <NSCopying>
+@interface ZAFFrame : NSObject <NSCopying, NSMutableCopying>
 
 + (ZAFFrame*)emptyFrame;
 
@@ -20,7 +20,7 @@
 @end
 
 
-@interface ZAFMutableFrame : ZAFFrame <NSMutableCopying>
+@interface ZAFMutableFrame : ZAFFrame
 
 + (ZAFMutableFrame*)emptyFrame;
 

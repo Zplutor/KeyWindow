@@ -7,9 +7,9 @@
 @class ZAFMutableHotKey;
 
 
-@interface ZAFLayoutItem : NSObject <NSCopying>
+@interface ZAFLayoutItem : NSObject <NSCopying, NSMutableCopying>
 
-- (ZAFLayoutItem*)emptyLayoutItem;
++ (ZAFLayoutItem*)emptyLayoutItem;
 
 - (NSString*)identifier;
 - (NSString*)name;
@@ -22,7 +22,7 @@
 
 
 
-@interface ZAFMutableLayoutItem : ZAFLayoutItem <NSMutableCopying>
+@interface ZAFMutableLayoutItem : ZAFLayoutItem
 
 - (void)setIdentifier:(NSString*)identifier;
 - (void)setName:(NSString*)name;

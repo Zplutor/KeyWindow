@@ -18,7 +18,7 @@
 @implementation ZAFLayoutItem
 
 
-- (ZAFLayoutItem*)emptyLayoutItem {
++ (ZAFLayoutItem*)emptyLayoutItem {
     return [[ZAFLayoutItem alloc] init];
 }
 
@@ -64,12 +64,17 @@
 
 - (id)copyWithZone:(NSZone*)zone {
     
-    ZAFLayoutItem* newItem = [[[self class] allocWithZone:zone] init];
+    return [self mutableCopyWithZone:zone];
+}
+
+
+- (id)mutableCopyWithZone:(NSZone*)zone {
     
-    newItem->_identifier = _identifier;
-    newItem->_name = _name;
-    newItem->_hotKey = _hotKey;
-    newItem->_frame = _frame;
+    ZAFMutableLayoutItem* newItem = [[ZAFMutableLayoutItem alloc] init];
+    newItem.identifier = [_identifier copy];
+    newItem.name = [_name copy];
+    newItem.hotKey = [_hotKey copy];
+    newItem.frame = [_frame copy];
     
     return newItem;
 }
@@ -99,12 +104,6 @@
 
 - (void)setFrame:(ZAFFrame*)frame {
     _frame = [frame copy];
-}
-
-
-- (id)mutableCopyWithZone:(NSZone*)zone {
-    
-    return [self copyWithZone:zone];
 }
 
 

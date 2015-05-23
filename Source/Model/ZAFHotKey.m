@@ -54,7 +54,13 @@
 
 - (id)copyWithZone:(NSZone*)zone {
     
-    return [[[self class] allocWithZone:zone] initWithKeyCode:_keyCode keyModifiers:_keyModifiers];
+    return [self mutableCopyWithZone:zone];
+}
+
+
+- (id)mutableCopyWithZone:(NSZone*)zone {
+    
+    return [[ZAFMutableHotKey allocWithZone:zone] initWithKeyCode:_keyCode keyModifiers:_keyModifiers];
 }
 
 
@@ -77,12 +83,6 @@
 
 - (void)setKeyModifiers:(NSEventModifierFlags)keyModifiers {
     _keyModifiers = keyModifiers;
-}
-
-
-- (id)mutableCopyWithZone:(NSZone*)zone {
-    
-    return [self copyWithZone:zone];
 }
 
 

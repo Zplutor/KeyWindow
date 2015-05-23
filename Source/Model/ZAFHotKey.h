@@ -2,7 +2,7 @@
 #import <AppKit/AppKit.h>
 
 
-@interface ZAFHotKey : NSObject <NSCopying>
+@interface ZAFHotKey : NSObject <NSCopying, NSMutableCopying>
 
 + (ZAFHotKey*)emptyHotKey;
 
@@ -17,7 +17,7 @@
 
 
 
-@interface ZAFMutableHotKey : ZAFHotKey <NSMutableCopying>
+@interface ZAFMutableHotKey : ZAFHotKey
 
 + (ZAFMutableHotKey*)emptyHotKey;
 
