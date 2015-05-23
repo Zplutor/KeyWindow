@@ -28,7 +28,6 @@
 		B788AA861AE5596900D635D2 /* ZAFApplicationDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = B788AA851AE5596900D635D2 /* ZAFApplicationDelegate.mm */; };
 		B788AA8F1AE69CA100D635D2 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B788AA8D1AE69CA100D635D2 /* MainWindow.xib */; };
 		B788AA921AE69CDC00D635D2 /* Application.xib in Resources */ = {isa = PBXBuildFile; fileRef = B788AA901AE69CDC00D635D2 /* Application.xib */; };
-		B788AA951AE69D5100D635D2 /* ZAFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA941AE69D5100D635D2 /* ZAFMainWindowController.m */; };
 		B788AA991AE7CFED00D635D2 /* ZAFLayoutItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA981AE7CFED00D635D2 /* ZAFLayoutItem.m */; };
 		B788AA9C1AE7D07300D635D2 /* ZAFHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA9B1AE7D07300D635D2 /* ZAFHotKey.m */; };
 		B788AA9F1AE7D13300D635D2 /* ZAFFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA9E1AE7D13300D635D2 /* ZAFFrame.m */; };
@@ -40,8 +39,12 @@
 		B7B46BC81AF0C62700B66654 /* ZAFUINotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B46BC71AF0C62700B66654 /* ZAFUINotifications.m */; };
 		B7B46BD21AF0D68200B66654 /* ZAFLoginItemService.mm in Sources */ = {isa = PBXBuildFile; fileRef = B7B46BD11AF0D68200B66654 /* ZAFLoginItemService.mm */; };
 		B7B46BD51AF0DA4F00B66654 /* ZAFLoginItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B7B46BD41AF0DA4F00B66654 /* ZAFLoginItem.m */; };
-		B7CF7F661AEB541D00C48EC1 /* LayoutItemView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CF7F641AEB541D00C48EC1 /* LayoutItemView.xib */; };
-		B7FE2DF31AEB5E090051E805 /* ZAFLayoutItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FE2DF21AEB5E090051E805 /* ZAFLayoutItemViewController.m */; };
+		B7CF7F661AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CF7F641AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib */; };
+		B7FCB2B01B10254700FC3E21 /* ZAFLayoutCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */; };
+		B7FCB2B81B107A1F00FC3E21 /* ZAFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2B71B107A1F00FC3E21 /* ZAFMainWindowController.m */; };
+		B7FCB2BB1B107B0E00FC3E21 /* LayoutsPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FCB2B91B107B0E00FC3E21 /* LayoutsPageView.xib */; };
+		B7FCB2BE1B107CB600FC3E21 /* ZAFLayoutsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2BD1B107CB600FC3E21 /* ZAFLayoutsPageViewController.m */; };
+		B7FCB2C51B10880F00FC3E21 /* ZAFEditLayoutItemSheetWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2C41B10880F00FC3E21 /* ZAFEditLayoutItemSheetWindowController.m */; };
 		B7FE2DFE1AEB770A0051E805 /* LayoutItemListView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7FE2DFC1AEB770A0051E805 /* LayoutItemListView.xib */; };
 		B7FE2E021AEB78980051E805 /* ZAFLayoutItemListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FE2E011AEB78980051E805 /* ZAFLayoutItemListViewController.m */; };
 /* End PBXBuildFile section */
@@ -111,8 +114,6 @@
 		B788AA851AE5596900D635D2 /* ZAFApplicationDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFApplicationDelegate.mm; path = Source/UI/ZAFApplicationDelegate.mm; sourceTree = "<group>"; };
 		B788AA8E1AE69CA100D635D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/MainWindow.xib; sourceTree = "<group>"; };
 		B788AA911AE69CDC00D635D2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/Application.xib; sourceTree = "<group>"; };
-		B788AA931AE69D5100D635D2 /* ZAFMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFMainWindowController.h; path = Source/UI/ZAFMainWindowController.h; sourceTree = "<group>"; };
-		B788AA941AE69D5100D635D2 /* ZAFMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFMainWindowController.m; path = Source/UI/ZAFMainWindowController.m; sourceTree = "<group>"; };
 		B788AA971AE7CFED00D635D2 /* ZAFLayoutItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutItem.h; path = Source/Model/ZAFLayoutItem.h; sourceTree = "<group>"; };
 		B788AA981AE7CFED00D635D2 /* ZAFLayoutItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutItem.m; path = Source/Model/ZAFLayoutItem.m; sourceTree = "<group>"; };
 		B788AA9A1AE7D07300D635D2 /* ZAFHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFHotKey.h; path = Source/Model/ZAFHotKey.h; sourceTree = "<group>"; };
@@ -125,7 +126,7 @@
 		B79D860A1B073B6900DC03FA /* ZAFAlignmentLinesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAlignmentLinesView.m; path = Source/UI/WindowLayoutView/ZAFAlignmentLinesView.m; sourceTree = "<group>"; };
 		B79D86131B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/Application.strings"; sourceTree = "<group>"; };
 		B79D86141B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/MainWindow.strings"; sourceTree = "<group>"; };
-		B79D86151B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/LayoutItemView.strings"; sourceTree = "<group>"; };
+		B79D86151B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/EditLayoutItemSheetWindow.strings"; sourceTree = "<group>"; };
 		B79D86161B0A378600DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/LayoutItemListView.strings"; sourceTree = "<group>"; };
 		B79D86181B0A3B4300DC03FA /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/KeyWindow.strings"; sourceTree = "<group>"; };
 		B7B46BC21AEFBBF600B66654 /* ZAFPreference.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFPreference.h; path = Source/UI/Preference/ZAFPreference.h; sourceTree = "<group>"; };
@@ -136,9 +137,16 @@
 		B7B46BD11AF0D68200B66654 /* ZAFLoginItemService.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFLoginItemService.mm; path = Source/Utility/LoginItemService/ZAFLoginItemService.mm; sourceTree = "<group>"; };
 		B7B46BD31AF0DA4F00B66654 /* ZAFLoginItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLoginItem.h; path = Source/Utility/LoginItemService/ZAFLoginItem.h; sourceTree = "<group>"; };
 		B7B46BD41AF0DA4F00B66654 /* ZAFLoginItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLoginItem.m; path = Source/Utility/LoginItemService/ZAFLoginItem.m; sourceTree = "<group>"; };
-		B7CF7F651AEB541D00C48EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/LayoutItemView.xib; sourceTree = "<group>"; };
-		B7FE2DF11AEB5E090051E805 /* ZAFLayoutItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutItemViewController.h; path = Source/UI/LayoutItemView/ZAFLayoutItemViewController.h; sourceTree = "<group>"; };
-		B7FE2DF21AEB5E090051E805 /* ZAFLayoutItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutItemViewController.m; path = Source/UI/LayoutItemView/ZAFLayoutItemViewController.m; sourceTree = "<group>"; };
+		B7CF7F651AEB541D00C48EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/EditLayoutItemSheetWindow.xib; sourceTree = "<group>"; };
+		B7FCB2AE1B10254700FC3E21 /* ZAFLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutCellView.h; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.h; sourceTree = "<group>"; };
+		B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutCellView.m; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.m; sourceTree = "<group>"; };
+		B7FCB2B61B107A1F00FC3E21 /* ZAFMainWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFMainWindowController.h; path = Source/UI/MainWindow/ZAFMainWindowController.h; sourceTree = "<group>"; };
+		B7FCB2B71B107A1F00FC3E21 /* ZAFMainWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFMainWindowController.m; path = Source/UI/MainWindow/ZAFMainWindowController.m; sourceTree = "<group>"; };
+		B7FCB2BA1B107B0E00FC3E21 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/LayoutsPageView.xib; sourceTree = "<group>"; };
+		B7FCB2BC1B107CB600FC3E21 /* ZAFLayoutsPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutsPageViewController.h; path = Source/UI/MainWindow/ZAFLayoutsPageViewController.h; sourceTree = "<group>"; };
+		B7FCB2BD1B107CB600FC3E21 /* ZAFLayoutsPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutsPageViewController.m; path = Source/UI/MainWindow/ZAFLayoutsPageViewController.m; sourceTree = "<group>"; };
+		B7FCB2C31B10880F00FC3E21 /* ZAFEditLayoutItemSheetWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFEditLayoutItemSheetWindowController.h; path = Source/UI/EditLayoutItemSheetWindow/ZAFEditLayoutItemSheetWindowController.h; sourceTree = "<group>"; };
+		B7FCB2C41B10880F00FC3E21 /* ZAFEditLayoutItemSheetWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFEditLayoutItemSheetWindowController.m; path = Source/UI/EditLayoutItemSheetWindow/ZAFEditLayoutItemSheetWindowController.m; sourceTree = "<group>"; };
 		B7FE2DFD1AEB770A0051E805 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/LayoutItemListView.xib; sourceTree = "<group>"; };
 		B7FE2E001AEB78980051E805 /* ZAFLayoutItemListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutItemListViewController.h; path = Source/UI/LayoutItemListView/ZAFLayoutItemListViewController.h; sourceTree = "<group>"; };
 		B7FE2E011AEB78980051E805 /* ZAFLayoutItemListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutItemListViewController.m; path = Source/UI/LayoutItemListView/ZAFLayoutItemListViewController.m; sourceTree = "<group>"; };
@@ -214,7 +222,8 @@
 			children = (
 				B788AA901AE69CDC00D635D2 /* Application.xib */,
 				B788AA8D1AE69CA100D635D2 /* MainWindow.xib */,
-				B7CF7F641AEB541D00C48EC1 /* LayoutItemView.xib */,
+				B7FCB2B91B107B0E00FC3E21 /* LayoutsPageView.xib */,
+				B7CF7F641AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib */,
 				B7FE2DFC1AEB770A0051E805 /* LayoutItemListView.xib */,
 				B71A353B1AFDDB0B00424E50 /* Images.xcassets */,
 				B79D86171B0A3B4300DC03FA /* KeyWindow.strings */,
@@ -279,14 +288,13 @@
 		B788AA721AE3BABF00D635D2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				B7FCB2B51B1079AD00FC3E21 /* MainWindow */,
 				B7FE2DFF1AEB786C0051E805 /* LayoutItemListView */,
-				B7CF7F7F1AEB5A1800C48EC1 /* LayoutItemView */,
+				B7FCB2BF1B10833900FC3E21 /* EditLayoutItemSheetWindow */,
 				B71A352C1AFA5EB600424E50 /* WindowLayoutView */,
 				B7B46BBD1AEFBBA800B66654 /* Preference */,
 				B788AA841AE5596900D635D2 /* ZAFApplicationDelegate.h */,
 				B788AA851AE5596900D635D2 /* ZAFApplicationDelegate.mm */,
-				B788AA931AE69D5100D635D2 /* ZAFMainWindowController.h */,
-				B788AA941AE69D5100D635D2 /* ZAFMainWindowController.m */,
 				B7B46BC61AF0C62700B66654 /* ZAFUINotifications.h */,
 				B7B46BC71AF0C62700B66654 /* ZAFUINotifications.m */,
 				B7696E111B0B924B009203FC /* ZAFLocalization.h */,
@@ -370,13 +378,24 @@
 			name = LoginItemService;
 			sourceTree = "<group>";
 		};
-		B7CF7F7F1AEB5A1800C48EC1 /* LayoutItemView */ = {
+		B7FCB2B51B1079AD00FC3E21 /* MainWindow */ = {
 			isa = PBXGroup;
 			children = (
-				B7FE2DF11AEB5E090051E805 /* ZAFLayoutItemViewController.h */,
-				B7FE2DF21AEB5E090051E805 /* ZAFLayoutItemViewController.m */,
+				B7FCB2B61B107A1F00FC3E21 /* ZAFMainWindowController.h */,
+				B7FCB2B71B107A1F00FC3E21 /* ZAFMainWindowController.m */,
+				B7FCB2BC1B107CB600FC3E21 /* ZAFLayoutsPageViewController.h */,
+				B7FCB2BD1B107CB600FC3E21 /* ZAFLayoutsPageViewController.m */,
 			);
-			name = LayoutItemView;
+			name = MainWindow;
+			sourceTree = "<group>";
+		};
+		B7FCB2BF1B10833900FC3E21 /* EditLayoutItemSheetWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B7FCB2C31B10880F00FC3E21 /* ZAFEditLayoutItemSheetWindowController.h */,
+				B7FCB2C41B10880F00FC3E21 /* ZAFEditLayoutItemSheetWindowController.m */,
+			);
+			name = EditLayoutItemSheetWindow;
 			sourceTree = "<group>";
 		};
 		B7FE2DFF1AEB786C0051E805 /* LayoutItemListView */ = {
@@ -384,6 +403,8 @@
 			children = (
 				B7FE2E001AEB78980051E805 /* ZAFLayoutItemListViewController.h */,
 				B7FE2E011AEB78980051E805 /* ZAFLayoutItemListViewController.m */,
+				B7FCB2AE1B10254700FC3E21 /* ZAFLayoutCellView.h */,
+				B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */,
 			);
 			name = LayoutItemListView;
 			sourceTree = "<group>";
@@ -464,11 +485,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B788AA8F1AE69CA100D635D2 /* MainWindow.xib in Resources */,
+				B7FCB2BB1B107B0E00FC3E21 /* LayoutsPageView.xib in Resources */,
 				B71A353C1AFDDB0B00424E50 /* Images.xcassets in Resources */,
 				B788AA921AE69CDC00D635D2 /* Application.xib in Resources */,
 				B7FE2DFE1AEB770A0051E805 /* LayoutItemListView.xib in Resources */,
 				B79D86191B0A3B4300DC03FA /* KeyWindow.strings in Resources */,
-				B7CF7F661AEB541D00C48EC1 /* LayoutItemView.xib in Resources */,
+				B7CF7F661AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -481,19 +503,20 @@
 			files = (
 				B788AA3E1AE3A99600D635D2 /* ZAFHotKeyManager.mm in Sources */,
 				B788AA5D1AE3B82D00D635D2 /* PTHotKey.m in Sources */,
+				B7FCB2B81B107A1F00FC3E21 /* ZAFMainWindowController.m in Sources */,
 				B7B46BD21AF0D68200B66654 /* ZAFLoginItemService.mm in Sources */,
-				B788AA951AE69D5100D635D2 /* ZAFMainWindowController.m in Sources */,
 				B788AA3B1AE3A8F400D635D2 /* ZAFRuntime.mm in Sources */,
 				B788AA441AE3B47200D635D2 /* ZAFWindowManager.m in Sources */,
 				B7B46BC81AF0C62700B66654 /* ZAFUINotifications.m in Sources */,
 				B788AA9F1AE7D13300D635D2 /* ZAFFrame.m in Sources */,
+				B7FCB2B01B10254700FC3E21 /* ZAFLayoutCellView.m in Sources */,
 				B79D860B1B073B6900DC03FA /* ZAFAlignmentLinesView.m in Sources */,
 				B788AA811AE3BAED00D635D2 /* ZAFAxService.m in Sources */,
 				B788AA041AE2962D00D635D2 /* main.m in Sources */,
 				B7B46BC41AEFBBF600B66654 /* ZAFPreference.mm in Sources */,
 				B788AA601AE3B82D00D635D2 /* PTKeyCombo.m in Sources */,
+				B7FCB2BE1B107CB600FC3E21 /* ZAFLayoutsPageViewController.m in Sources */,
 				B71A35301AFA5F2500424E50 /* ZAFWindowLayoutView.m in Sources */,
-				B7FE2DF31AEB5E090051E805 /* ZAFLayoutItemViewController.m in Sources */,
 				B788AA9C1AE7D07300D635D2 /* ZAFHotKey.m in Sources */,
 				B7B46BD51AF0DA4F00B66654 /* ZAFLoginItem.m in Sources */,
 				B7696E131B0B924B009203FC /* ZAFLocalization.m in Sources */,
@@ -508,6 +531,7 @@
 				B788AA861AE5596900D635D2 /* ZAFApplicationDelegate.mm in Sources */,
 				B788AA801AE3BAED00D635D2 /* ZAFAxObject.m in Sources */,
 				B788AA411AE3B0A600D635D2 /* ZAFEvents.m in Sources */,
+				B7FCB2C51B10880F00FC3E21 /* ZAFEditLayoutItemSheetWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,13 +565,21 @@
 			name = KeyWindow.strings;
 			sourceTree = "<group>";
 		};
-		B7CF7F641AEB541D00C48EC1 /* LayoutItemView.xib */ = {
+		B7CF7F641AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
 				B7CF7F651AEB541D00C48EC1 /* Base */,
 				B79D86151B0A378600DC03FA /* zh-Hans */,
 			);
-			name = LayoutItemView.xib;
+			name = EditLayoutItemSheetWindow.xib;
+			sourceTree = "<group>";
+		};
+		B7FCB2B91B107B0E00FC3E21 /* LayoutsPageView.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7FCB2BA1B107B0E00FC3E21 /* Base */,
+			);
+			name = LayoutsPageView.xib;
 			sourceTree = "<group>";
 		};
 		B7FE2DFC1AEB770A0051E805 /* LayoutItemListView.xib */ = {

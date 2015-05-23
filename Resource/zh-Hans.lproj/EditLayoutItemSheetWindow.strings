@@ -1,7 +1,3 @@
-
-/* Class = "NSTextFieldCell"; title = "%"; ObjectID = "9u1-Xh-JYK"; */
-"9u1-Xh-JYK.title" = "%";
-
 /* Class = "NSTextFieldCell"; title = "Width :"; ObjectID = "G5z-qn-AKH"; */
 "G5z-qn-AKH.title" = "宽 :";
 
@@ -17,17 +13,11 @@
 /* Class = "NSBox"; title = "Layout"; ObjectID = "eqQ-s5-L1D"; */
 "eqQ-s5-L1D.title" = "布局";
 
-/* Class = "NSTextFieldCell"; title = "%"; ObjectID = "iFE-KE-y5P"; */
-"iFE-KE-y5P.title" = "%";
-
-/* Class = "NSTextFieldCell"; title = "%"; ObjectID = "qDa-Ha-iHc"; */
-"qDa-Ha-iHc.title" = "%";
-
 /* Class = "NSTextFieldCell"; title = "HotKey :"; ObjectID = "sjR-Vd-co9"; */
 "sjR-Vd-co9.title" = "快捷键 :";
 
-/* Class = "NSTextFieldCell"; title = "%"; ObjectID = "uDU-HG-Hwu"; */
-"uDU-HG-Hwu.title" = "%";
-
 /* Class = "NSTextFieldCell"; title = "Description :"; ObjectID = "wW6-hO-fPV"; */
 "wW6-hO-fPV.title" = "描述 :";
+
+"hh7-gi-i99.title" = "确定";
+"nnp-nJ-tFO.title" = "取消";

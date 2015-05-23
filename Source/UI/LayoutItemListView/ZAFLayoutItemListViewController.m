@@ -1,4 +1,8 @@
 #import "ZAFLayoutItemListViewController.h"
+#import <ShortcutRecorder/SRKeyCodeTransformer.h>
+#import <ShortcutRecorder/SRModifierFlagsTransformer.h>
+#import "ZAFHotKey.h"
+#import "ZAFLayoutCellView.h"
 #import "ZAFLayoutItem.h"
 #import "ZAFLocalization.h"
 
@@ -16,6 +20,10 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 
 - (NSUInteger)zaf_indexOfLayoutItemWithIdentifier:(NSString*)identifier;
 - (void)zaf_layoutItemTableViewDidDoubleClick:(id)sender;
+
+- (void)zaf_initializeLayoutCellView:(ZAFLayoutCellView*)view forLayoutFrame:(ZAFFrame*)layoutFrame;
+- (void)zaf_initializeNameCellView:(NSTableCellView*)view forName:(NSString*)name;
+- (void)zaf_initializeHotKeyCellView:(NSTableCellView*)view forHotKey:(ZAFHotKey*)hotKey;
 
 @end
 
@@ -157,8 +165,10 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
     }
     
     [_layoutItems replaceObjectAtIndex:selectedIndex withObject:layoutItem];
+    
+    NSRange reloadColumnIndexes = NSMakeRange(0, self.layoutItemTableView.tableColumns.count);
     [self.layoutItemTableView reloadDataForRowIndexes:[NSIndexSet indexSetWithIndex:selectedIndex]
-                                        columnIndexes:[NSIndexSet indexSetWithIndex:0]];
+                                        columnIndexes:[NSIndexSet indexSetWithIndexesInRange:reloadColumnIndexes]];
 }
 
 
@@ -195,13 +205,60 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 - (NSView*)tableView:(NSTableView*)tableView viewForTableColumn:(NSTableColumn*)tableColumn row:(NSInteger)row {
     
     ZAFLayoutItem* layoutItem = _layoutItems[row];
-
-    NSTableCellView* cellView = [tableView makeViewWithIdentifier:@"LayoutItem" owner:self];
-    cellView.textField.backgroundColor = [NSColor clearColor];
-    cellView.textField.stringValue =
-        layoutItem.name.length == 0 ? ZAFGetLocalizedString(@"EmptyLayoutItemNameDisplayText") : layoutItem.name;
-    cellView.textField.enabled = tableView.isEnabled;
+    
+    id cellView = [tableView makeViewWithIdentifier:tableColumn.identifier owner:self];
+    
+    if ([tableColumn.identifier isEqualToString:@"Layout"]) {
+        [self zaf_initializeLayoutCellView:cellView forLayoutFrame:layoutItem.frame];
+    }
+    else if ([tableColumn.identifier isEqualToString:@"Name"]) {
+        [self zaf_initializeNameCellView:cellView forName:layoutItem.name];
+    }
+    else if ([tableColumn.identifier isEqualToString:@"HotKey"]) {
+        [self zaf_initializeHotKeyCellView:cellView forHotKey:layoutItem.hotKey];
+    }
+    
     return cellView;
+}
+
+
+- (void)zaf_initializeLayoutCellView:(ZAFLayoutCellView*)cellView forLayoutFrame:(ZAFFrame*)layoutFrame {
+    
+    [cellView setLayoutFrame:layoutFrame];
+}
+
+
+- (void)zaf_initializeNameCellView:(NSTableCellView*)cellView forName:(NSString*)name {
+    
+    NSString* stringValue = name;
+    
+    if (name.length == 0) {
+        stringValue = ZAFGetLocalizedString(@"EmptyLayoutItemNameDisplayText");
+    }
+    
+    cellView.textField.stringValue = stringValue;
+}
+
+
+- (void)zaf_initializeHotKeyCellView:(NSTableCellView*)cellView forHotKey:(ZAFHotKey*)hotKey {
+
+    NSString* stringValue = nil;
+    
+    if (hotKey.isEmpty) {
+        
+        stringValue = ZAFGetLocalizedString(@"EmptyLayoutItemHotKeyDisplayText");
+    }
+    else {
+        
+        stringValue = [NSString stringWithFormat:
+                       @"%@ %@",
+                       [[SRModifierFlagsTransformer sharedTransformer] transformedValue:@(hotKey.keyModifiers)],
+                       [[SRKeyCodeTransformer sharedPlainTransformer] transformedValue:@(hotKey.keyCode)
+                                                             withImplicitModifierFlags:nil
+                                                                 explicitModifierFlags:@(hotKey.keyModifiers)]];
+    }
+    
+    cellView.textField.stringValue = stringValue;
 }
 
 

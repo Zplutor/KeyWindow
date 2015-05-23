@@ -33,7 +33,6 @@ static NSCursor* LoadCursor(NSString* cursorName);
         _hoveringArea = ZAFWindowAreaNone;
         _windowAreasAndCursors = [[NSMutableDictionary alloc] init];
         
-        self.alphaValue = 0.6;
         self.enabled = YES;
     }
     return self;
@@ -46,17 +45,21 @@ static NSCursor* LoadCursor(NSString* cursorName);
     
     [[NSGraphicsContext currentContext] saveGraphicsState];
     
-    static const CGFloat kBorderThickness = 2;
+    static const CGFloat kBorderThickness = 1;
     
-    //画边框
-    [[NSColor blackColor] setFill];
-    NSBezierPath* borderPath = [NSBezierPath bezierPathWithRoundedRect:dirtyRect xRadius:2 yRadius:2];
-    [borderPath fill];
+    //对于这个视图来说，总是整个重画。
+    //不知道什么原因，在移动视图的时候dirtyRect的x和y是小数，导致画的位置不对，
+    //所以这里直接使用self.bounds来画。
+    NSRect drawnRect = CollapseRect(self.bounds, kBorderThickness / 2);
     
-    //画中间
-    [[NSColor darkGrayColor] setFill];
-    NSRect visibleRect = CollapseRect(dirtyRect, kBorderThickness);
-    NSRectFill(visibleRect);
+    NSBezierPath* drawPath = [NSBezierPath bezierPathWithRoundedRect:drawnRect xRadius:2 yRadius:2];
+    [drawPath setLineWidth:kBorderThickness];
+    
+    [[NSColor colorWithRed:0 green:0 blue:0 alpha:0.6] setStroke];
+    [drawPath stroke];
+    
+    [[NSColor colorWithRed:0 green:0 blue:0 alpha:0.2] setFill];
+    [drawPath fill];
     
     [[NSGraphicsContext currentContext] restoreGraphicsState];
 }
@@ -146,6 +149,7 @@ static NSCursor* LoadCursor(NSString* cursorName);
 - (void)mouseEntered:(NSEvent*)theEvent {
     
     if (! _enabled) {
+        [super mouseEntered:theEvent];
         return;
     }
     
@@ -164,6 +168,7 @@ static NSCursor* LoadCursor(NSString* cursorName);
 - (void)mouseExited:(NSEvent*)theEvent {
 
     if (! _enabled) {
+        [super mouseExited:theEvent];
         return;
     }
     
@@ -212,6 +217,7 @@ static NSCursor* LoadCursor(NSString* cursorName);
 - (void)mouseDown:(NSEvent*)theEvent {
     
     if (! _enabled) {
+        [super mouseDown:theEvent];
         return;
     }
     

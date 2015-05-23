@@ -88,10 +88,23 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
 }
 
 
+- (void)resizeSubviewsWithOldSize:(NSSize)oldSize {
+    
+    [super resizeSubviewsWithOldSize:oldSize];
+    
+    //大小改变之后要重新对子视图布局
+    [self zaf_innerChangeWindowLayoutWithXPercent:&_xPercent
+                                         yPercent:&_yPercent
+                                     widthPercent:&_widthPercent
+                                    heightPercent:&_heightPercent];
+    
+    _alignmentLinesView.frame = self.bounds;
+}
+
+
 - (void)drawRect:(NSRect)dirtyRect {
     
-    [super drawRect:dirtyRect];
-    
+    [super drawRect:dirtyRect];    
     [self zaf_drawDesktopInRect:dirtyRect];
 }
 
@@ -465,7 +478,6 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
 
 - (void)setEnabled:(BOOL)enabled {
     
-    self.alphaValue = enabled ? 1 : 0.7;
     _windowView.enabled = enabled;
 }
 

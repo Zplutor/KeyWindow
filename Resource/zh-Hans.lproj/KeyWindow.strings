@@ -1,6 +1,6 @@
 "NewLayoutItemName" = "新布局";
 "EmptyLayoutItemNameDisplayText" = "( 无描述 )";
-
+"EmptyLayoutItemHotKeyDisplayText" = "( 无快捷键 )";
 
 "ConfirmDeleteLayoutItemAlertTitle" = "确定删除 \" %@ \" 吗?";
 "ConfirmDeleteLayoutItemAlertOkButtonText" = "确定";

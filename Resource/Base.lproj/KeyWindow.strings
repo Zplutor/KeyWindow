@@ -1,5 +1,6 @@
 "NewLayoutItemName" = "New Layout";
 "EmptyLayoutItemNameDisplayText" = "( No description )";
+"EmptyLayoutItemHotKeyDisplayText" = "( No hot key )";
 
 "ConfirmDeleteLayoutItemAlertTitle" = "Sure to delete \" %@ \" ?";
 "ConfirmDeleteLayoutItemAlertOkButtonText" = "OK";

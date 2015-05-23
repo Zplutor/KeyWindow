@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ZAFLayoutsPageViewController">
+            <connections>
+                <outlet property="layoutItemListViewPlaceHolder" destination="fQ6-Pj-IeD" id="lEg-KE-dIU"/>
+                <outlet property="layoutItemListViewSegmentButtons" destination="9A7-yK-3Fa" id="OwS-pC-tm2"/>
+                <outlet property="view" destination="c22-O7-iKe" id="UV2-6A-jjc"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="1" width="480" height="484"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <customView translatesAutoresizingMaskIntoConstraints="NO" id="fQ6-Pj-IeD" userLabel="Layout Item List View Place Holder">
+                    <rect key="frame" x="10" y="50" width="460" height="414"/>
+                </customView>
+                <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9A7-yK-3Fa" userLabel="Layout Item List View Buttons">
+                    <rect key="frame" x="18" y="17" width="80" height="24"/>
+                    <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="qDr-qX-CMa">
+                        <font key="font" metaFont="system"/>
+                        <segments>
+                            <segment image="NSAddTemplate" width="24">
+                                <nil key="label"/>
+                            </segment>
+                            <segment image="NSRemoveTemplate" width="24" enabled="NO" tag="1">
+                                <nil key="label"/>
+                            </segment>
+                            <segment image="NSActionTemplate" width="24" enabled="NO">
+                                <nil key="label"/>
+                            </segment>
+                        </segments>
+                    </segmentedCell>
+                    <connections>
+                        <action selector="zaf_layoutItemListViewSegmentButtonDidClick:" target="-2" id="pIH-Sl-DVg"/>
+                    </connections>
+                </segmentedControl>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="fQ6-Pj-IeD" secondAttribute="trailing" constant="10" id="Cdd-16-asK"/>
+                <constraint firstItem="fQ6-Pj-IeD" firstAttribute="top" secondItem="c22-O7-iKe" secondAttribute="top" constant="20" id="Iat-Ot-b9O"/>
+                <constraint firstItem="fQ6-Pj-IeD" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="Kc8-Z4-10Q"/>
+                <constraint firstItem="9A7-yK-3Fa" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="biD-5Z-QpB"/>
+                <constraint firstItem="9A7-yK-3Fa" firstAttribute="top" secondItem="fQ6-Pj-IeD" secondAttribute="bottom" constant="10" id="fhJ-NJ-hEk"/>
+                <constraint firstAttribute="bottom" secondItem="fQ6-Pj-IeD" secondAttribute="bottom" constant="50" id="iSL-pX-HMp"/>
+            </constraints>
+            <point key="canvasLocation" x="322" y="353"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
+        <image name="NSAddTemplate" width="11" height="11"/>
+        <image name="NSRemoveTemplate" width="11" height="11"/>
+    </resources>
+</document>
