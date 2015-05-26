@@ -53,7 +53,17 @@
 - (void)resizeSubviewsWithOldSize:(NSSize)oldSize {
     
     [super resizeSubviewsWithOldSize:oldSize];
-    [_windowLayoutView setFrame:self.bounds];
+    
+    //布局窗口的高度充满，并且保持比例。水平居中。
+    NSRect boundsFrame = self.bounds;
+    
+    NSRect windowLayoutViewFrame = { 0 };
+    windowLayoutViewFrame.size.width = boundsFrame.size.height * 16 / 10;
+    windowLayoutViewFrame.size.height = boundsFrame.size.height;
+    windowLayoutViewFrame.origin.x = (boundsFrame.size.width - windowLayoutViewFrame.size.width) / 2;
+    windowLayoutViewFrame.origin.y = boundsFrame.origin.y;
+
+    [_windowLayoutView setFrame:windowLayoutViewFrame];
 }
 
 
