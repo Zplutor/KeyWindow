@@ -125,6 +125,7 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
     }
     
     [self.layoutItemTableView selectRowIndexes:[NSIndexSet indexSetWithIndex:index] byExtendingSelection:NO];
+    [self.layoutItemTableView scrollRowToVisible:index];
     return YES;
 }
 

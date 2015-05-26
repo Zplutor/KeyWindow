@@ -111,6 +111,7 @@ static const NSInteger kEditLayoutItemSegmentButtonIndex = 2;
         if (isSucceeded) {
             
             [_layoutItemListViewController addLayoutItem:newItem];
+            [_layoutItemListViewController selectLayoutItemWithIdentifier:newItem.identifier];
         }
         else {
             
