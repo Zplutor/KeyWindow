@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7702"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ZAFMainWindowController">
@@ -9,6 +9,7 @@
                 <outlet property="launchAtLoginButton" destination="fKB-cw-cBo" id="FVQ-pO-YdU"/>
                 <outlet property="pagePlaceHolder" destination="ff4-7M-Xp0" id="vlk-xq-S7W"/>
                 <outlet property="showIconOnStatusBarButton" destination="R7v-ob-KyB" id="D7M-Qp-zH5"/>
+                <outlet property="toolbar" destination="gHT-TX-4dV" id="ViJ-1s-4FA"/>
                 <outlet property="versionLabel" destination="EHq-Xi-MKR" id="xvx-4F-A0F"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="pUG-BO-3UJ"/>
             </connections>
@@ -86,17 +87,28 @@
             </view>
             <toolbar key="toolbar" implicitIdentifier="D5D6A66F-7940-4CA2-8699-EF0DDBB58202" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="gHT-TX-4dV">
                 <allowedToolbarItems>
-                    <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="Q41-Ts-Ef2"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="k0m-oQ-gRn"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="yWw-Fm-cEU"/>
-                    <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="wai-HU-OV4"/>
                     <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="YU3-FW-nWu"/>
+                    <toolbarItem implicitItemIdentifier="6E73D461-4270-4605-82B5-23172101611D" explicitItemIdentifier="About" label="About" paletteLabel="About" tag="-1" image="NSInfo" selectable="YES" id="bck-Rd-e0p">
+                        <connections>
+                            <action selector="aboutToolbarItemDidClick:" target="-2" id="ntJ-iy-kyM"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="9356893F-E69F-481E-8B11-1D0610743298" explicitItemIdentifier="Layouts" label="Layouts" paletteLabel="Layouts" tag="-1" image="NSComputer" selectable="YES" id="vXF-ge-hTE">
+                        <connections>
+                            <action selector="layoutsToolbarItemDidClick:" target="-2" id="EkK-ge-xoz"/>
+                        </connections>
+                    </toolbarItem>
+                    <toolbarItem implicitItemIdentifier="8607DEA4-084C-4569-ABF2-D6197819E33A" explicitItemIdentifier="Options" label="Options" paletteLabel="Options" tag="-1" image="NSPreferencesGeneral" selectable="YES" id="fgB-Dm-K8f">
+                        <connections>
+                            <action selector="optionsToolbarItemDidClick:" target="-2" id="GZ3-0l-f6J"/>
+                        </connections>
+                    </toolbarItem>
                 </allowedToolbarItems>
                 <defaultToolbarItems>
-                    <toolbarItem reference="Q41-Ts-Ef2"/>
-                    <toolbarItem reference="k0m-oQ-gRn"/>
+                    <toolbarItem reference="vXF-ge-hTE"/>
+                    <toolbarItem reference="fgB-Dm-K8f"/>
                     <toolbarItem reference="YU3-FW-nWu"/>
-                    <toolbarItem reference="yWw-Fm-cEU"/>
+                    <toolbarItem reference="bck-Rd-e0p"/>
                 </defaultToolbarItems>
             </toolbar>
             <connections>
@@ -105,4 +117,9 @@
             <point key="canvasLocation" x="422" y="298"/>
         </window>
     </objects>
+    <resources>
+        <image name="NSComputer" width="32" height="32"/>
+        <image name="NSInfo" width="32" height="32"/>
+        <image name="NSPreferencesGeneral" width="32" height="32"/>
+    </resources>
 </document>
