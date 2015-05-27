@@ -2,17 +2,11 @@
 /* Class = "NSButtonCell"; title = "Save"; ObjectID = "15W-1O-41X"; */
 "15W-1O-41X.title" = "保存";
 
-/* Class = "NSButtonCell"; title = "Launch at login"; ObjectID = "CH7-05-shF"; */
-"CH7-05-shF.title" = "在登录时启动";
-
 /* Class = "NSButtonCell"; title = "Exit KeyWindow"; ObjectID = "GOm-39-BmC"; */
 "GOm-39-BmC.title" = "退出 KeyWindow";
 
 /* Class = "NSButtonCell"; title = "Discard"; ObjectID = "LFB-CT-jiz"; */
 "LFB-CT-jiz.title" = "取消";
-
-/* Class = "NSButtonCell"; title = "Show icon on status bar"; ObjectID = "LtD-wo-hYQ"; */
-"LtD-wo-hYQ.title" = "在状态栏显示图标";
 
 /* Class = "NSWindow"; title = "KeyWindow"; ObjectID = "QvC-M9-y7g"; */
 "QvC-M9-y7g.title" = "KeyWindow";

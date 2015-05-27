@@ -1,0 +1,6 @@
+
+/* Class = "NSButtonCell"; title = "Launch at login"; ObjectID = "GWI-rZ-kA2"; */
+"GWI-rZ-kA2.title" = "在登录时启动";
+
+/* Class = "NSButtonCell"; title = "Show icon on status bar"; ObjectID = "M2Z-6G-Ev9"; */
+"M2Z-6G-Ev9.title" = "在状态栏显示图标";

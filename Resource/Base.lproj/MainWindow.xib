@@ -6,9 +6,7 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="ZAFMainWindowController">
             <connections>
-                <outlet property="launchAtLoginButton" destination="fKB-cw-cBo" id="FVQ-pO-YdU"/>
                 <outlet property="pagePlaceHolder" destination="ff4-7M-Xp0" id="vlk-xq-S7W"/>
-                <outlet property="showIconOnStatusBarButton" destination="R7v-ob-KyB" id="D7M-Qp-zH5"/>
                 <outlet property="toolbar" destination="gHT-TX-4dV" id="ViJ-1s-4FA"/>
                 <outlet property="versionLabel" destination="EHq-Xi-MKR" id="xvx-4F-A0F"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="pUG-BO-3UJ"/>
@@ -28,16 +26,6 @@
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="vxj-D1-1BL" userLabel="Content">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <subviews>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fKB-cw-cBo">
-                                <rect key="frame" x="18" y="18" width="117" height="18"/>
-                                <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="CH7-05-shF">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="zaf_launchAtLoginButtonClick:" target="-2" id="9PF-hC-0JJ"/>
-                                </connections>
-                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHq-Xi-MKR">
                                 <rect key="frame" x="348" y="49" width="134" height="17"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.1.1" usesSingleLineMode="YES" id="cAf-KK-hfz">
@@ -54,16 +42,6 @@
                                 </buttonCell>
                                 <connections>
                                     <action selector="zaf_exitApplicationButtonDidClick:" target="-2" id="OAv-iF-hBK"/>
-                                </connections>
-                            </button>
-                            <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="R7v-ob-KyB">
-                                <rect key="frame" x="144" y="18" width="172" height="18"/>
-                                <buttonCell key="cell" type="check" title="Show icon on status bar" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="LtD-wo-hYQ">
-                                    <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="zaf_showIconOnStatusBarButtonDidClick:" target="-2" id="804-po-V4U"/>
                                 </connections>
                             </button>
                             <customView translatesAutoresizingMaskIntoConstraints="NO" id="ff4-7M-Xp0" userLabel="Page Place Holder">
