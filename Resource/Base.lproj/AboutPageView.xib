@@ -33,12 +33,22 @@
                     </constraints>
                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="Ixj-Tv-OtC"/>
                 </imageView>
+                <box verticalHuggingPriority="750" title="Box" boxType="separator" titlePosition="noTitle" translatesAutoresizingMaskIntoConstraints="NO" id="PwZ-6g-ggm">
+                    <rect key="frame" x="100" y="183" width="280" height="5"/>
+                    <color key="borderColor" white="0.0" alpha="0.41999999999999998" colorSpace="calibratedWhite"/>
+                    <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <font key="titleFont" metaFont="system"/>
+                </box>
             </subviews>
             <constraints>
                 <constraint firstItem="oyZ-Qu-7fy" firstAttribute="top" secondItem="Ew3-ea-Z4e" secondAttribute="bottom" constant="8" id="0Za-jg-gmL"/>
+                <constraint firstItem="PwZ-6g-ggm" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="100" id="8tR-Tt-1SK"/>
                 <constraint firstAttribute="centerX" secondItem="Ew3-ea-Z4e" secondAttribute="centerX" id="CKl-pX-amh"/>
                 <constraint firstAttribute="centerY" secondItem="oyZ-Qu-7fy" secondAttribute="centerY" id="UhZ-o9-7BC"/>
+                <constraint firstAttribute="centerX" secondItem="PwZ-6g-ggm" secondAttribute="centerX" id="dmm-D7-1uk"/>
                 <constraint firstAttribute="centerX" secondItem="oyZ-Qu-7fy" secondAttribute="centerX" id="nPz-Vz-Rv4"/>
+                <constraint firstAttribute="centerY" secondItem="PwZ-6g-ggm" secondAttribute="centerY" constant="-15" id="rks-r2-7Ot"/>
+                <constraint firstAttribute="trailing" secondItem="PwZ-6g-ggm" secondAttribute="trailing" constant="100" id="rx3-dU-yne"/>
             </constraints>
         </customView>
     </objects>
