@@ -66,6 +66,15 @@ static int CarbonModifiersFromCocoaModifiers(NSEventModifierFlags cocoaModifiers
 }
 
 
+- (BOOL)isExistentHotKeyWithIdentifier:(NSString*)identifier {
+    
+    NSParameterAssert(identifier != nil);
+    
+    PTHotKey* hotKey = [[PTHotKeyCenter sharedCenter] hotKeyForName:identifier];
+    return hotKey != nil;
+}
+
+
 - (void)zaf_hotKeyDidPress:(PTHotKey*)hotKey {
     
     if (_listener != nil) {

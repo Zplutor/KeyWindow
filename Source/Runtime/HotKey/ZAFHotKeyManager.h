@@ -18,4 +18,6 @@
 - (BOOL)unregisterHotKeyWithIdentifier:(NSString*)identifier;
 - (void)unregisterAllHotKeys;
 
+- (BOOL)isExistentHotKeyWithIdentifier:(NSString*)identifier;
+
 @end

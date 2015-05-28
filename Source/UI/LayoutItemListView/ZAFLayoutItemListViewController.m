@@ -5,6 +5,7 @@
 #import "ZAFLayoutCellView.h"
 #import "ZAFLayoutItem.h"
 #import "ZAFLocalization.h"
+#import "ZAFRuntime.h"
 
 
 static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimationEffectNone;
@@ -24,6 +25,7 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 - (void)zaf_initializeLayoutCellView:(ZAFLayoutCellView*)view forLayoutFrame:(ZAFFrame*)layoutFrame;
 - (void)zaf_initializeNameCellView:(NSTableCellView*)view forName:(NSString*)name;
 - (void)zaf_initializeHotKeyCellView:(NSTableCellView*)view forHotKey:(ZAFHotKey*)hotKey;
+- (void)zaf_initializeIsEffectedCellView:(NSTableCellView*)view forLayoutItemIdentifier:(NSString*)identifier;
 
 @end
 
@@ -218,6 +220,9 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
     else if ([tableColumn.identifier isEqualToString:@"HotKey"]) {
         [self zaf_initializeHotKeyCellView:cellView forHotKey:layoutItem.hotKey];
     }
+    else if ([tableColumn.identifier isEqualTo:@"IsEffected"]) {
+        [self zaf_initializeIsEffectedCellView:cellView forLayoutItemIdentifier:layoutItem.identifier];
+    }
     
     return cellView;
 }
@@ -260,6 +265,19 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
     }
     
     cellView.textField.stringValue = stringValue;
+}
+
+
+- (void)zaf_initializeIsEffectedCellView:(NSTableCellView*)view forLayoutItemIdentifier:(NSString*)identifier {
+    
+    BOOL isEffected = [[ZAFRuntime defaultRuntime] isEffectedLayoutItemWithIdentifier:identifier];
+    
+    if (isEffected) {
+        view.imageView.image = nil;
+    }
+    else {
+        view.imageView.image = [NSImage imageNamed:NSImageNameCaution];
+    }
 }
 
 

@@ -144,6 +144,14 @@
 }
 
 
+- (BOOL)isEffectedLayoutItemWithIdentifier:(NSString*)identifier {
+    
+    NSParameterAssert(identifier != nil);
+    
+    return [_hotKeyManager isExistentHotKeyWithIdentifier:identifier];
+}
+
+
 - (void)hotKeyDidPress:(NSString*)identifier {
  
     ZAFLayoutItem* layoutItem = [_layoutItemStorage layoutItemWithIdentifier:identifier];
