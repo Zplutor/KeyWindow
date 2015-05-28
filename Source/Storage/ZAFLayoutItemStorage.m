@@ -55,7 +55,7 @@ static NSString* const kHeightPercentKey = @"HeightPercent";
     }
     
     NSURL* url = urls[0];
-    url = [url URLByAppendingPathComponent:@"QuickLayout" isDirectory:YES];
+    url = [url URLByAppendingPathComponent:@"KeyWindow" isDirectory:YES];
     url = [url URLByAppendingPathComponent:@"LayoutItems.plist" isDirectory:NO];
     return url.path;
 }
