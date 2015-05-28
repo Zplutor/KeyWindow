@@ -1,15 +1,8 @@
+"vXF-ge-hTE.label" = "布局";
+"fgB-Dm-K8f.label" = "选项";
+"bck-Rd-e0p.label" = "关于";
 
-/* Class = "NSButtonCell"; title = "Save"; ObjectID = "15W-1O-41X"; */
-"15W-1O-41X.title" = "保存";
-
-/* Class = "NSButtonCell"; title = "Exit KeyWindow"; ObjectID = "GOm-39-BmC"; */
+"nb5-xg-aVg.title" = "隐藏";
 "GOm-39-BmC.title" = "退出 KeyWindow";
 
-/* Class = "NSButtonCell"; title = "Discard"; ObjectID = "LFB-CT-jiz"; */
-"LFB-CT-jiz.title" = "取消";
 
-/* Class = "NSWindow"; title = "KeyWindow"; ObjectID = "QvC-M9-y7g"; */
-"QvC-M9-y7g.title" = "KeyWindow";
-
-/* Class = "NSTextFieldCell"; title = "0.1.1"; ObjectID = "cAf-KK-hfz"; */
-"cAf-KK-hfz.title" = "0.1.1";

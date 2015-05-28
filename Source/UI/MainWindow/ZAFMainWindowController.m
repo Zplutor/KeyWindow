@@ -1,4 +1,5 @@
 #import "ZAFMainWindowController.h"
+#import "ZAFAboutPageViewController.h"
 #import "ZAFFrame.h"
 #import "ZAFLayoutItem.h"
 #import "ZAFLayoutsPageViewController.h"
@@ -9,25 +10,20 @@
 #import "ZAFUINotifications.h"
 
 
-
-static NSString* GetApplicationVersion();
-
-
 @interface ZAFMainWindowController () <NSWindowDelegate> {
     
     ZAFLayoutsPageViewController* _layoutsPageViewController;
     ZAFOptionsPageViewController* _optionsPageViewController;
+    ZAFAboutPageViewController* _aboutPageViewController;
 }
 
 @property (nonatomic, weak) IBOutlet NSToolbar* toolbar;
-
 @property (nonatomic, weak) IBOutlet NSView* pagePlaceHolder;
-
-@property (nonatomic, weak) IBOutlet NSTextField* versionLabel;
 
 - (IBAction)layoutsToolbarItemDidClick:(id)sender;
 - (IBAction)optionsToolbarItemDidClick:(id)sender;
 - (IBAction)aboutToolbarItemDidClick:(id)sender;
+- (IBAction)zaf_hideWindowButtonDidClick:(id)sender;
 - (IBAction)zaf_exitApplicationButtonDidClick:(id)sender;
 
 - (void)zaf_switchToPageController:(NSViewController*)controller;
@@ -53,8 +49,6 @@ static NSString* GetApplicationVersion();
 
 
 - (void)zaf_loadSubviews {
-        
-    self.versionLabel.stringValue = GetApplicationVersion();
     
     //首次启动，模拟点击第一个工具栏按钮。
     [self.toolbar setSelectedItemIdentifier:@"Layouts"];
@@ -90,7 +84,11 @@ static NSString* GetApplicationVersion();
 
 - (IBAction)aboutToolbarItemDidClick:(id)sender {
     
+    if (_aboutPageViewController == nil) {
+        _aboutPageViewController = [ZAFAboutPageViewController create];
+    }
     
+    [self zaf_switchToPageController:_aboutPageViewController];
 }
 
 
@@ -110,6 +108,12 @@ static NSString* GetApplicationVersion();
 }
 
 
+- (IBAction)zaf_hideWindowButtonDidClick:(id)sender {
+    
+    [self close];
+}
+
+
 - (IBAction)zaf_exitApplicationButtonDidClick:(id)sender {
     
     [[NSApplication sharedApplication] terminate:self];
@@ -120,12 +124,3 @@ static NSString* GetApplicationVersion();
 
 
 
-static NSString* GetApplicationVersion() {
-    
-    NSDictionary* bundleInformation = [[NSBundle mainBundle] infoDictionary];
-    NSString* version = [bundleInformation objectForKey:@"CFBundleShortVersionString"];
-    if (version == nil) {
-        return [NSString string];
-    }
-    return version;
-}

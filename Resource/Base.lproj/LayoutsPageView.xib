@@ -18,10 +18,10 @@
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
                 <customView translatesAutoresizingMaskIntoConstraints="NO" id="fQ6-Pj-IeD" userLabel="Layout Item List View Place Holder">
-                    <rect key="frame" x="10" y="50" width="460" height="414"/>
+                    <rect key="frame" x="10" y="40" width="460" height="424"/>
                 </customView>
                 <segmentedControl verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9A7-yK-3Fa" userLabel="Layout Item List View Buttons">
-                    <rect key="frame" x="18" y="17" width="80" height="24"/>
+                    <rect key="frame" x="18" y="7" width="80" height="24"/>
                     <segmentedCell key="cell" borderStyle="border" alignment="left" style="rounded" trackingMode="momentary" id="qDr-qX-CMa">
                         <font key="font" metaFont="system"/>
                         <segments>
@@ -47,7 +47,7 @@
                 <constraint firstItem="fQ6-Pj-IeD" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="10" id="Kc8-Z4-10Q"/>
                 <constraint firstItem="9A7-yK-3Fa" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="20" id="biD-5Z-QpB"/>
                 <constraint firstItem="9A7-yK-3Fa" firstAttribute="top" secondItem="fQ6-Pj-IeD" secondAttribute="bottom" constant="10" id="fhJ-NJ-hEk"/>
-                <constraint firstAttribute="bottom" secondItem="fQ6-Pj-IeD" secondAttribute="bottom" constant="50" id="iSL-pX-HMp"/>
+                <constraint firstAttribute="bottom" secondItem="fQ6-Pj-IeD" secondAttribute="bottom" constant="40" id="iSL-pX-HMp"/>
             </constraints>
             <point key="canvasLocation" x="322" y="353"/>
         </customView>

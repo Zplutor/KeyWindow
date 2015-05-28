@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="7706"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="ZAFAboutPageViewController">
+            <connections>
+                <outlet property="iconView" destination="Ew3-ea-Z4e" id="v3R-VS-GCw"/>
+                <outlet property="versionLabel" destination="oyZ-Qu-7fy" id="Gz6-yJ-l3u"/>
+                <outlet property="view" destination="c22-O7-iKe" id="951-uW-3Lm"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="c22-O7-iKe">
+            <rect key="frame" x="0.0" y="0.0" width="480" height="400"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="oyZ-Qu-7fy">
+                    <rect key="frame" x="184" y="192" width="112" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="KeyWindow 0.0.0" id="r9L-kJ-uJc">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ew3-ea-Z4e">
+                    <rect key="frame" x="176" y="217" width="128" height="128"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="128" id="Ur1-dc-wbL"/>
+                        <constraint firstAttribute="width" constant="128" id="aC2-bA-0Mk"/>
+                    </constraints>
+                    <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyDown" image="NSApplicationIcon" id="Ixj-Tv-OtC"/>
+                </imageView>
+            </subviews>
+            <constraints>
+                <constraint firstItem="oyZ-Qu-7fy" firstAttribute="top" secondItem="Ew3-ea-Z4e" secondAttribute="bottom" constant="8" id="0Za-jg-gmL"/>
+                <constraint firstAttribute="centerX" secondItem="Ew3-ea-Z4e" secondAttribute="centerX" id="CKl-pX-amh"/>
+                <constraint firstAttribute="centerY" secondItem="oyZ-Qu-7fy" secondAttribute="centerY" id="UhZ-o9-7BC"/>
+                <constraint firstAttribute="centerX" secondItem="oyZ-Qu-7fy" secondAttribute="centerX" id="nPz-Vz-Rv4"/>
+            </constraints>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSApplicationIcon" width="128" height="128"/>
+    </resources>
+</document>

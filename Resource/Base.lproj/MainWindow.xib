@@ -8,7 +8,6 @@
             <connections>
                 <outlet property="pagePlaceHolder" destination="ff4-7M-Xp0" id="vlk-xq-S7W"/>
                 <outlet property="toolbar" destination="gHT-TX-4dV" id="ViJ-1s-4FA"/>
-                <outlet property="versionLabel" destination="EHq-Xi-MKR" id="xvx-4F-A0F"/>
                 <outlet property="window" destination="QvC-M9-y7g" id="pUG-BO-3UJ"/>
             </connections>
         </customObject>
@@ -26,16 +25,24 @@
                     <customView translatesAutoresizingMaskIntoConstraints="NO" id="vxj-D1-1BL" userLabel="Content">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="500"/>
                         <subviews>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EHq-Xi-MKR">
-                                <rect key="frame" x="348" y="49" width="134" height="17"/>
-                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="0.1.1" usesSingleLineMode="YES" id="cAf-KK-hfz">
+                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ff4-7M-Xp0" userLabel="Page Place Holder">
+                                <rect key="frame" x="0.0" y="40" width="500" height="460"/>
+                            </customView>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Ua-8E-qkL">
+                                <rect key="frame" x="394" y="13" width="92" height="32"/>
+                                <buttonCell key="cell" type="push" title="Hide" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="nb5-xg-aVg">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                                    <string key="keyEquivalent" base64-UTF8="YES">
+Gw
+</string>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="zaf_hideWindowButtonDidClick:" target="-2" id="7m4-jo-0uh"/>
+                                </connections>
+                            </button>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EKN-xq-x7c">
-                                <rect key="frame" x="346" y="13" width="140" height="32"/>
+                                <rect key="frame" x="254" y="13" width="140" height="32"/>
                                 <buttonCell key="cell" type="push" title="Exit KeyWindow" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GOm-39-BmC">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -44,16 +51,13 @@
                                     <action selector="zaf_exitApplicationButtonDidClick:" target="-2" id="OAv-iF-hBK"/>
                                 </connections>
                             </button>
-                            <customView translatesAutoresizingMaskIntoConstraints="NO" id="ff4-7M-Xp0" userLabel="Page Place Holder">
-                                <rect key="frame" x="0.0" y="50" width="500" height="450"/>
-                            </customView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="ff4-7M-Xp0" firstAttribute="leading" secondItem="vxj-D1-1BL" secondAttribute="leading" id="1id-rL-wNA"/>
                             <constraint firstAttribute="width" constant="500" id="7XX-UL-he7"/>
                             <constraint firstAttribute="trailing" secondItem="ff4-7M-Xp0" secondAttribute="trailing" id="AGT-Xr-glo"/>
                             <constraint firstItem="ff4-7M-Xp0" firstAttribute="top" secondItem="vxj-D1-1BL" secondAttribute="top" id="DhW-Cm-a2A"/>
-                            <constraint firstAttribute="bottom" secondItem="ff4-7M-Xp0" secondAttribute="bottom" constant="50" id="m5R-Mz-Cgz"/>
+                            <constraint firstAttribute="bottom" secondItem="ff4-7M-Xp0" secondAttribute="bottom" constant="40" id="m5R-Mz-Cgz"/>
                             <constraint firstAttribute="height" constant="500" id="otT-C0-9NO"/>
                         </constraints>
                     </customView>
