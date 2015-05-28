@@ -93,8 +93,8 @@ static const NSInteger kEditLayoutItemSegmentButtonIndex = 2;
     ZAFMutableLayoutItem* newLayoutItem = [[ZAFMutableLayoutItem alloc] init];
     newLayoutItem.identifier = @([[NSDate date] timeIntervalSince1970]).stringValue;
     newLayoutItem.name = ZAFGetLocalizedString(@"NewLayoutItemName");
-    newLayoutItem.frame = [[ZAFFrame alloc] initWithXPercent:0.25
-                                                    yPercent:0.25
+    newLayoutItem.frame = [[ZAFFrame alloc] initWithXPercent:0
+                                                    yPercent:0
                                                 widthPercent:0.5
                                                heightPercent:0.5];
     
