@@ -20,4 +20,16 @@
 - (BOOL)getSize:(NSSize*)size;
 - (BOOL)setSize:(NSSize)size;
 
+/**
+ 获取当前窗口是否一个Sheet窗口。
+ */
+- (BOOL)isSheet;
+
+/**
+ 获取当前窗口的父窗口。
+ 
+ 如果当前窗口没有父窗口，返回nil。
+ */
+- (ZAFAxWindowObject*)parentWindow;
+
 @end

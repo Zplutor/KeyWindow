@@ -81,12 +81,21 @@
         return nil;
     }
     
-    ZAFAxApplicationObject* focusedApplicationObject = [systemWideObject focusedApplication];
+    ZAFAxApplicationObject* focusedApplicationObject = systemWideObject.focusedApplication;
     if (focusedApplicationObject == nil) {
         return nil;
     }
     
-    return [focusedApplicationObject focusedWindow];
+    ZAFAxWindowObject* focusedWindowObject = focusedApplicationObject.focusedWindow;
+    if (focusedWindowObject == nil) {
+        return nil;
+    }
+    
+    if (focusedWindowObject.isSheet) {
+        focusedWindowObject = focusedWindowObject.parentWindow;
+    }
+    
+    return focusedWindowObject;
 }
 
 

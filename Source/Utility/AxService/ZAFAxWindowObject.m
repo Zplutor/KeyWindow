@@ -1,6 +1,9 @@
 #import "ZAFAxWindowObject.h"
 
 
+static BOOL ElementIsRole(AXUIElementRef elment, CFStringRef role);
+
+
 @implementation ZAFAxWindowObject
 
 
@@ -52,4 +55,45 @@
 }
 
 
+- (BOOL)isSheet {
+    
+    return ElementIsRole(self.handle, kAXSheetRole);
+}
+
+
+- (ZAFAxWindowObject*)parentWindow {
+    
+    AXUIElementRef parentObject = NULL;
+    AXError error = AXUIElementCopyAttributeValue(self.handle, kAXParentAttribute, (CFTypeRef*)&parentObject);
+    if (error != kAXErrorSuccess) {
+        return nil;
+    }
+    
+    if (parentObject == NULL) {
+        return nil;
+    }
+    
+    if (! ElementIsRole(parentObject, kAXWindowRole)) {
+        return nil;
+    }
+    
+    return [[ZAFAxWindowObject alloc] initWithHandle:parentObject];
+}
+
+
 @end
+
+
+
+static BOOL ElementIsRole(AXUIElementRef element, CFStringRef role) {
+    
+    CFStringRef elementRole = NULL;
+    AXError error = AXUIElementCopyAttributeValue(element, kAXRoleAttribute, (CFTypeRef*)&elementRole);
+    if (error != kAXErrorSuccess) {
+        return NO;
+    }
+    
+    CFComparisonResult compareResult = CFStringCompare(elementRole, role, 0);
+    CFRelease(elementRole);
+    return compareResult == kCFCompareEqualTo;
+}

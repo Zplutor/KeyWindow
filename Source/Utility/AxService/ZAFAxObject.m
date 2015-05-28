@@ -32,8 +32,17 @@
 }
 
 
+- (void)dealloc {
+
+    if (_handle != NULL) {
+        CFRelease(_handle);
+    }
+}
+
+
 - (AXUIElementRef)handle {
     return _handle;
 }
+
 
 @end
