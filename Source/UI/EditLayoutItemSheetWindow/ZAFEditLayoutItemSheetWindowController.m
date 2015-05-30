@@ -3,6 +3,7 @@
 #import "ZAFFrame.h"
 #import "ZAFHotKey.h"
 #import "ZAFLayoutItem.h"
+#import "ZAFUtilities.h"
 #import "ZAFWindowLayoutView.h"
 
 
@@ -278,15 +279,7 @@ static const double kMinHeightPercent = 0.2;
 
 static int RoundedIntegerValueFromPercentValue(double percentValue) {
     
-    if (percentValue < 0) {
-        return 0;
-    }
-    else if (percentValue > 1) {
-        return 1;
-    }
-    else {
-        return round(percentValue * 100);
-    }
+    return round(ZAFCorrectPercentValue(percentValue) * 100);
 }
 
 
@@ -296,7 +289,7 @@ static double PercentValueFromIntegerValue(int integerValue) {
         return 0;
     }
     else if (integerValue > 100) {
-        return 100;
+        return 1;
     }
     else {
         return (double)integerValue / 100;

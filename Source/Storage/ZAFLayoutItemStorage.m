@@ -2,6 +2,7 @@
 #import "ZAFFrame.h"
 #import "ZAFHotKey.h"
 #import "ZAFLayoutItem.h"
+#import "ZAFUtilities.h"
 
 
 static NSString* const kIdentifierKey = @"Identifier";
@@ -218,22 +219,22 @@ static NSString* const kHeightPercentKey = @"HeightPercent";
     
     NSNumber* xPercent = [dictionary objectForKey:kXPercentKey];
     if (xPercent != nil) {
-        frame.xPercent = xPercent.doubleValue;
+        frame.xPercent = ZAFCorrectPercentValue(xPercent.doubleValue);
     }
     
     NSNumber* yPercent = [dictionary objectForKey:kYPercentKey];
     if (yPercent != nil) {
-        frame.yPercent = yPercent.doubleValue;
+        frame.yPercent = ZAFCorrectPercentValue(yPercent.doubleValue);
     }
     
     NSNumber* widthPercent = [dictionary objectForKey:kWidthPercentKey];
     if (widthPercent != nil) {
-        frame.widthPercent = widthPercent.doubleValue;
+        frame.widthPercent = ZAFCorrectPercentValue(widthPercent.doubleValue);
     }
     
     NSNumber* heightPercent = [dictionary objectForKey:kHeightPercentKey];
     if (heightPercent != nil) {
-        frame.heightPercent = heightPercent.doubleValue;
+        frame.heightPercent = ZAFCorrectPercentValue(heightPercent.doubleValue);
     }
     
     ZAFMutableLayoutItem* layoutItem = [[ZAFMutableLayoutItem alloc] init];
@@ -284,3 +285,5 @@ static NSString* const kHeightPercentKey = @"HeightPercent";
 
 
 @end
+
+

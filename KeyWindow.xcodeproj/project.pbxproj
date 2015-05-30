@@ -43,6 +43,7 @@
 		B7C56F611B1629E600B32B14 /* ZAFOptionsPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56F601B1629E600B32B14 /* ZAFOptionsPageViewController.m */; };
 		B7C56F671B16984E00B32B14 /* AboutPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C56F651B16984E00B32B14 /* AboutPageView.xib */; };
 		B7C56F6B1B169AF400B32B14 /* ZAFAboutPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56F6A1B169AF400B32B14 /* ZAFAboutPageViewController.m */; };
+		B7C56F731B19820400B32B14 /* ZAFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56F721B19820400B32B14 /* ZAFUtilities.m */; };
 		B7CF7F661AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CF7F641AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib */; };
 		B7FCB2B01B10254700FC3E21 /* ZAFLayoutCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */; };
 		B7FCB2B81B107A1F00FC3E21 /* ZAFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2B71B107A1F00FC3E21 /* ZAFMainWindowController.m */; };
@@ -148,6 +149,8 @@
 		B7C56F661B16984E00B32B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/AboutPageView.xib; sourceTree = "<group>"; };
 		B7C56F691B169AF400B32B14 /* ZAFAboutPageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFAboutPageViewController.h; path = Source/UI/MainWindow/ZAFAboutPageViewController.h; sourceTree = "<group>"; };
 		B7C56F6A1B169AF400B32B14 /* ZAFAboutPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAboutPageViewController.m; path = Source/UI/MainWindow/ZAFAboutPageViewController.m; sourceTree = "<group>"; };
+		B7C56F711B19820400B32B14 /* ZAFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFUtilities.h; path = Source/Utility/ZAFUtilities.h; sourceTree = "<group>"; };
+		B7C56F721B19820400B32B14 /* ZAFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFUtilities.m; path = Source/Utility/ZAFUtilities.m; sourceTree = "<group>"; };
 		B7CF7F651AEB541D00C48EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/EditLayoutItemSheetWindow.xib; sourceTree = "<group>"; };
 		B7FCB2AE1B10254700FC3E21 /* ZAFLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutCellView.h; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.h; sourceTree = "<group>"; };
 		B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutCellView.m; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.m; sourceTree = "<group>"; };
@@ -321,6 +324,8 @@
 			children = (
 				B788AA741AE3BAD400D635D2 /* AxService */,
 				B7B46BCF1AF0D64C00B66654 /* LoginItemService */,
+				B7C56F711B19820400B32B14 /* ZAFUtilities.h */,
+				B7C56F721B19820400B32B14 /* ZAFUtilities.m */,
 			);
 			name = Utility;
 			sourceTree = "<group>";
@@ -532,6 +537,7 @@
 				B788AA9F1AE7D13300D635D2 /* ZAFFrame.m in Sources */,
 				B7FCB2B01B10254700FC3E21 /* ZAFLayoutCellView.m in Sources */,
 				B79D860B1B073B6900DC03FA /* ZAFAlignmentLinesView.m in Sources */,
+				B7C56F731B19820400B32B14 /* ZAFUtilities.m in Sources */,
 				B788AA811AE3BAED00D635D2 /* ZAFAxService.m in Sources */,
 				B788AA041AE2962D00D635D2 /* main.m in Sources */,
 				B7B46BC41AEFBBF600B66654 /* ZAFPreference.mm in Sources */,
