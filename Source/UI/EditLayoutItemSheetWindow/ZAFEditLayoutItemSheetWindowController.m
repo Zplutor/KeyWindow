@@ -6,8 +6,9 @@
 #import "ZAFWindowLayoutView.h"
 
 
-static int IntegerValueFromPercentValue(double percentValue);
+static int RoundedIntegerValueFromPercentValue(double percentValue);
 static double PercentValueFromIntegerValue(int integerValue);
+static BOOL ArePercentsRoundedEqual(double percent1, double percent2);
 
 
 static const double kMinWidthPercent = 0.2;
@@ -29,8 +30,6 @@ static const double kMinHeightPercent = 0.2;
 @property (nonatomic, weak) IBOutlet NSNumberFormatter* integerNumberFormatter;
 @property (nonatomic, weak) IBOutlet NSView* windowLayoutViewPlaceHolder;
 
-- (void)zaf_showLayoutItem;
-
 - (IBAction)nameTextFieldDidChange:(id)sender;
 - (IBAction)xTextFieldDidChange:(id)sender;
 - (IBAction)yTextFieldDidChange:(id)sender;
@@ -39,6 +38,8 @@ static const double kMinHeightPercent = 0.2;
 
 - (IBAction)okButtonDidClick:(id)sender;
 - (IBAction)cancelButtonDidClick:(id)sender;
+
+- (void)zaf_showLayoutItem;
 
 @end
 
@@ -84,7 +85,6 @@ static const double kMinHeightPercent = 0.2;
 }
 
 
-
 - (void)setEditable:(BOOL)isEditable {
     
     self.nameTextField.enabled = isEditable;
@@ -125,10 +125,10 @@ static const double kMinHeightPercent = 0.2;
                                        nil];
     
     ZAFFrame* frame = _layoutItem.frame;
-    self.xPercentTextField.intValue = IntegerValueFromPercentValue(frame.xPercent);
-    self.yPercentTextField.intValue = IntegerValueFromPercentValue(frame.yPercent);
-    self.widthPercentTextField.intValue = IntegerValueFromPercentValue(frame.widthPercent);
-    self.heightPercentTextField.intValue = IntegerValueFromPercentValue(frame.heightPercent);
+    self.xPercentTextField.intValue = RoundedIntegerValueFromPercentValue(frame.xPercent);
+    self.yPercentTextField.intValue = RoundedIntegerValueFromPercentValue(frame.yPercent);
+    self.widthPercentTextField.intValue = RoundedIntegerValueFromPercentValue(frame.widthPercent);
+    self.heightPercentTextField.intValue = RoundedIntegerValueFromPercentValue(frame.heightPercent);
     
     [_windowLayoutView changeWithXPercent:frame.xPercent
                                  yPercent:frame.yPercent
@@ -145,44 +145,64 @@ static const double kMinHeightPercent = 0.2;
 
 - (IBAction)xTextFieldDidChange:(id)sender {
 
-    double xPercent = PercentValueFromIntegerValue(self.xPercentTextField.intValue);
-    [_windowLayoutView setXPercent:xPercent];
+    double newXPercent = PercentValueFromIntegerValue(self.xPercentTextField.intValue);
+    
+    if (ArePercentsRoundedEqual(newXPercent, _windowLayoutView.xPercent)) {
+        return;
+    }
+    
+    [_windowLayoutView setXPercent:newXPercent];
     
     ZAFMutableFrame* newFrame = [_layoutItem.frame mutableCopy];
-    newFrame.xPercent = xPercent;
+    newFrame.xPercent = newXPercent;
     _layoutItem.frame = newFrame;
 }
 
 
 - (IBAction)yTextFieldDidChange:(id)sender {
 
-    double yPercent = PercentValueFromIntegerValue(self.yPercentTextField.intValue);
-    [_windowLayoutView setYPercent:yPercent];
+    double newYPercent = PercentValueFromIntegerValue(self.yPercentTextField.intValue);
+
+    if (ArePercentsRoundedEqual(newYPercent, _windowLayoutView.yPercent)) {
+        return;
+    }
+    
+    [_windowLayoutView setYPercent:newYPercent];
     
     ZAFMutableFrame* newFrame = [_layoutItem.frame mutableCopy];
-    newFrame.yPercent = yPercent;
+    newFrame.yPercent = newYPercent;
     _layoutItem.frame = newFrame;
 }
 
 
 - (IBAction)widthTextFieldDidChange:(id)sender {
     
-    double widthPercent = PercentValueFromIntegerValue(self.widthPercentTextField.intValue);
-    [_windowLayoutView setWidthPercent:widthPercent];
+    double newWidthPercent = PercentValueFromIntegerValue(self.widthPercentTextField.intValue);
+
+    if (ArePercentsRoundedEqual(newWidthPercent, _windowLayoutView.widthPercent)) {
+        return;
+    }
+    
+    [_windowLayoutView setWidthPercent:newWidthPercent];
     
     ZAFMutableFrame* newFrame = [_layoutItem.frame mutableCopy];
-    newFrame.widthPercent = widthPercent;
+    newFrame.widthPercent = newWidthPercent;
     _layoutItem.frame = newFrame;
 }
 
 
 - (IBAction)heightTextFieldDidChange:(id)sender {
     
-    double heightPercent = PercentValueFromIntegerValue(self.heightPercentTextField.intValue);
-    [_windowLayoutView setHeightPercent:heightPercent];
+    double newHeightPercent = PercentValueFromIntegerValue(self.heightPercentTextField.intValue);
+
+    if (ArePercentsRoundedEqual(newHeightPercent, _windowLayoutView.heightPercent)) {
+        return;
+    }
+    
+    [_windowLayoutView setHeightPercent:newHeightPercent];
     
     ZAFMutableFrame* newFrame = [_layoutItem.frame mutableCopy];
-    newFrame.heightPercent = heightPercent;
+    newFrame.heightPercent = newHeightPercent;
     _layoutItem.frame = newFrame;
 }
 
@@ -210,10 +230,10 @@ static const double kMinHeightPercent = 0.2;
                            widthPercent:(double)widthPercent
                           heightPercent:(double)heightPercent {
     
-    self.xPercentTextField.intValue = IntegerValueFromPercentValue(xPercent);
-    self.yPercentTextField.intValue = IntegerValueFromPercentValue(yPercent);
-    self.widthPercentTextField.intValue = IntegerValueFromPercentValue(widthPercent);
-    self.heightPercentTextField.intValue = IntegerValueFromPercentValue(heightPercent);
+    self.xPercentTextField.intValue = RoundedIntegerValueFromPercentValue(xPercent);
+    self.yPercentTextField.intValue = RoundedIntegerValueFromPercentValue(yPercent);
+    self.widthPercentTextField.intValue = RoundedIntegerValueFromPercentValue(widthPercent);
+    self.heightPercentTextField.intValue = RoundedIntegerValueFromPercentValue(heightPercent);
     
     _layoutItem.frame = [[ZAFFrame alloc] initWithXPercent:xPercent
                                                   yPercent:yPercent
@@ -260,7 +280,7 @@ static const double kMinHeightPercent = 0.2;
 
 
 
-static int IntegerValueFromPercentValue(double percentValue) {
+static int RoundedIntegerValueFromPercentValue(double percentValue) {
     
     if (percentValue < 0) {
         return 0;
@@ -269,7 +289,7 @@ static int IntegerValueFromPercentValue(double percentValue) {
         return 1;
     }
     else {
-        return percentValue * 100;
+        return round(percentValue * 100);
     }
 }
 
@@ -287,3 +307,11 @@ static double PercentValueFromIntegerValue(int integerValue) {
     }
 }
 
+
+static BOOL ArePercentsRoundedEqual(double percent1, double percent2) {
+    
+    int roundedPercent1 = RoundedIntegerValueFromPercentValue(percent1);
+    int roundedPercent2 = RoundedIntegerValueFromPercentValue(percent2);
+
+    return roundedPercent1 == roundedPercent2;
+}

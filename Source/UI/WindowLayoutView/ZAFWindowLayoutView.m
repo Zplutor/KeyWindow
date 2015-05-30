@@ -457,6 +457,11 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
         newWindowFrame.origin.x = desktopFrame.size.width * _xPercent;
         newWindowFrame.origin.y = desktopFrame.size.height - flippedY - newWindowFrame.size.height;
         
+        CGFloat xBeforeAdjust = newWindowFrame.origin.x;
+        CGFloat yBeforeAdjust = newWindowFrame.origin.y;
+        CGFloat widthBeforeAdjust = newWindowFrame.size.width;
+        CGFloat heightBeforeAdjust = newWindowFrame.size.height;
+        
         AdjustFrameDimension(desktopFrame.size.width,
                              _minWidthPercent,
                              xPercentChangeMethod,
@@ -472,6 +477,22 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
                              &newWindowFrame.size.height);
         
         _windowView.frame = newWindowFrame;
+        
+        if (xBeforeAdjust != newWindowFrame.origin.x) {
+            _xPercent = newWindowFrame.origin.x / desktopFrame.size.width;
+        }
+        
+        if (yBeforeAdjust != newWindowFrame.origin.y) {
+            _yPercent = 1 - (newWindowFrame.origin.y + newWindowFrame.size.height) / desktopFrame.size.height;
+        }
+        
+        if (widthBeforeAdjust != newWindowFrame.size.width) {
+            _widthPercent = newWindowFrame.size.width / desktopFrame.size.width;
+        }
+        
+        if (heightBeforeAdjust != newWindowFrame.size.height) {
+            _heightPercent = newWindowFrame.size.height / desktopFrame.size.height;
+        }
         
         if (_delegate != nil) {
             [_delegate windowLayoutDidChangeToXPercent:_xPercent
