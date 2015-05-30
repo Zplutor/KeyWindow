@@ -21,6 +21,7 @@ typedef NS_OPTIONS(NSInteger, ZAFStickPosition) {
 
 
 static void AdjustFrameDimension(CGFloat bound,
+                                 double minSizePercent,
                                  ZAFFramePropertyChangeMethod originChangeMethod,
                                  ZAFFramePropertyChangeMethod sizeChangeMethod,
                                  CGFloat* origin,
@@ -42,6 +43,9 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
     ZAFWindowArea _draggingWindowArea;
     NSRect _originalWindowFrame;
     NSPoint _originalMouseLocation;
+    
+    double _minWidthPercent;
+    double _minHeightPercent;
 }
 
 - (void)zaf_drawDesktopInRect:(NSRect)rect;
@@ -76,6 +80,9 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
         _alignmentLinesView = [[ZAFAlignmentLinesView alloc] initWithFrame:frameRect];
         _alignmentLinesView.hidden = YES;
         [self addSubview:_alignmentLinesView];
+        
+        _minWidthPercent = 0;
+        _minHeightPercent = 0;
         
         _xPercent = 0;
         _yPercent = 0;
@@ -119,6 +126,16 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
     imageRect.size.height = _desktopImage.size.height * rect.size.height / self.bounds.size.height;
     
     [_desktopImage drawInRect:rect fromRect:imageRect operation:NSCompositeCopy fraction:1];
+}
+
+
+- (void)setMinWidthPercent:(double)minWidthPercent heightPercent:(double)minHeightPercent {
+    
+    [self zaf_assertPercentValue:minWidthPercent];
+    [self zaf_assertPercentValue:minHeightPercent];
+    
+    _minWidthPercent = minWidthPercent;
+    _minHeightPercent = minHeightPercent;
 }
 
 
@@ -221,12 +238,14 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
     
     //调整窗口的大小和位置
     AdjustFrameDimension(self.bounds.size.width,
+                         _minWidthPercent,
                          xChangeMethod,
                          widthChangeMethod,
                          &newFrame.origin.x,
                          &newFrame.size.width);
     
     AdjustFrameDimension(self.bounds.size.height,
+                         _minHeightPercent,
                          yChangeMethod,
                          heightChangeMethod,
                          &newFrame.origin.y,
@@ -439,12 +458,14 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
         newWindowFrame.origin.y = desktopFrame.size.height - flippedY - newWindowFrame.size.height;
         
         AdjustFrameDimension(desktopFrame.size.width,
+                             _minWidthPercent,
                              xPercentChangeMethod,
                              widthPercentChangeMethod,
                              &newWindowFrame.origin.x,
                              &newWindowFrame.size.width);
         
         AdjustFrameDimension(desktopFrame.size.height,
+                             _minHeightPercent,
                              yPercentChangeMethod,
                              heightPercentChangeMethod,
                              &newWindowFrame.origin.y,
@@ -487,6 +508,7 @@ static ZAFStickPosition StickFrameDimension(CGFloat bound,
 
 
 static void AdjustFrameDimension(CGFloat bound,
+                                 double minSizePercent,
                                  ZAFFramePropertyChangeMethod originChangeMethod,
                                  ZAFFramePropertyChangeMethod sizeChangeMethod,
                                  CGFloat* origin,
@@ -517,7 +539,7 @@ static void AdjustFrameDimension(CGFloat bound,
         }
     }
     
-    const CGFloat minSize = bound * 0.2;
+    const CGFloat minSize = bound * minSizePercent;
 
     if (sizeValue < minSize) {
         

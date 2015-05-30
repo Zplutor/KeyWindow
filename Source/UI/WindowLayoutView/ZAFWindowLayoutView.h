@@ -49,6 +49,15 @@
 - (void)clear;
 
 /**
+ 设置最小的宽度和高度。
+ 
+ 通过任何方式改变宽度和高度时，如果设置的值小于最小值，那么会使用最小值作为新值。
+ 
+ 默认的最小宽度和高度都是0。
+ */
+- (void)setMinWidthPercent:(double)minWidthPercent heightPercent:(double)minHeightPercent;
+
+/**
  改变窗口布局。
  */
 - (void)changeWithXPercent:(double)xPercent

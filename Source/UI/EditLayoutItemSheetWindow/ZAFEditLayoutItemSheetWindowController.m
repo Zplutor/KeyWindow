@@ -10,6 +10,10 @@ static int IntegerValueFromPercentValue(double percentValue);
 static double PercentValueFromIntegerValue(int integerValue);
 
 
+static const double kMinWidthPercent = 0.2;
+static const double kMinHeightPercent = 0.2;
+
+
 @interface ZAFEditLayoutItemSheetWindowController () <ZAFWindowLayoutViewDelegate, SRRecorderControlDelegate> {
     
     ZAFWindowLayoutView* _windowLayoutView;
@@ -73,6 +77,7 @@ static double PercentValueFromIntegerValue(int integerValue);
     
     _windowLayoutView = [[ZAFWindowLayoutView alloc] initWithFrame:self.windowLayoutViewPlaceHolder.bounds];
     _windowLayoutView.delegate = self;
+    [_windowLayoutView setMinWidthPercent:kMinWidthPercent heightPercent:kMinHeightPercent];
     [self.windowLayoutViewPlaceHolder addSubview:_windowLayoutView];
     
     [self zaf_showLayoutItem];
