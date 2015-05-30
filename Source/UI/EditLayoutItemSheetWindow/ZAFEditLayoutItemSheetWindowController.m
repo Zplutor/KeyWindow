@@ -255,15 +255,11 @@ static const double kMinHeightPercent = 0.2;
 
 - (IBAction)okButtonDidClick:(id)sender {
     
-    [self nameTextFieldDidChange:self.nameTextField];
-    [self xTextFieldDidChange:self.xPercentTextField];
-    [self yTextFieldDidChange:self.yPercentTextField];
-    [self widthTextFieldDidChange:self.widthPercentTextField];
-    [self heightTextFieldDidChange:self.heightPercentTextField];
-    [self shortcutRecorderDidEndRecording:self.hotKeyRecorder];
-    
-    if (_delegate != nil) {
-        [_delegate editLayoutItemSheetWindowControllerDidFinishEditing];
+    if ([self.window makeFirstResponder:nil]) {
+
+        if (_delegate != nil) {
+            [_delegate editLayoutItemSheetWindowControllerDidFinishEditing];
+        }
     }
 }
 
