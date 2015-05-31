@@ -23,7 +23,6 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 - (void)zaf_layoutItemTableViewDidDoubleClick:(id)sender;
 
 - (void)zaf_initializeLayoutCellView:(ZAFLayoutCellView*)view forLayoutFrame:(ZAFFrame*)layoutFrame;
-- (void)zaf_initializeNameCellView:(NSTableCellView*)view forName:(NSString*)name;
 - (void)zaf_initializeHotKeyCellView:(NSTableCellView*)view forHotKey:(ZAFHotKey*)hotKey;
 - (void)zaf_initializeIsEffectedCellView:(NSTableCellView*)view forLayoutItemIdentifier:(NSString*)identifier;
 
@@ -214,9 +213,6 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
     if ([tableColumn.identifier isEqualToString:@"Layout"]) {
         [self zaf_initializeLayoutCellView:cellView forLayoutFrame:layoutItem.frame];
     }
-    else if ([tableColumn.identifier isEqualToString:@"Name"]) {
-        [self zaf_initializeNameCellView:cellView forName:layoutItem.name];
-    }
     else if ([tableColumn.identifier isEqualToString:@"HotKey"]) {
         [self zaf_initializeHotKeyCellView:cellView forHotKey:layoutItem.hotKey];
     }
@@ -231,18 +227,6 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 - (void)zaf_initializeLayoutCellView:(ZAFLayoutCellView*)cellView forLayoutFrame:(ZAFFrame*)layoutFrame {
     
     [cellView setLayoutFrame:layoutFrame];
-}
-
-
-- (void)zaf_initializeNameCellView:(NSTableCellView*)cellView forName:(NSString*)name {
-    
-    NSString* stringValue = name;
-    
-    if (name.length == 0) {
-        stringValue = ZAFGetLocalizedString(@"EmptyLayoutItemNameDisplayText");
-    }
-    
-    cellView.textField.stringValue = stringValue;
 }
 
 

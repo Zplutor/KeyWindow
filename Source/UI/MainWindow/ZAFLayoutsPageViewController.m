@@ -92,7 +92,6 @@ static const NSInteger kEditLayoutItemSegmentButtonIndex = 2;
  
     ZAFMutableLayoutItem* newLayoutItem = [[ZAFMutableLayoutItem alloc] init];
     newLayoutItem.identifier = @([[NSDate date] timeIntervalSince1970]).stringValue;
-    newLayoutItem.name = ZAFGetLocalizedString(@"NewLayoutItemName");
     newLayoutItem.frame = [[ZAFFrame alloc] initWithXPercent:0
                                                     yPercent:0
                                                 widthPercent:0.5
@@ -131,9 +130,7 @@ static const NSInteger kEditLayoutItemSegmentButtonIndex = 2;
     NSAlert* deleteAlert = [[NSAlert alloc] init];
     [deleteAlert addButtonWithTitle:ZAFGetLocalizedString(@"ConfirmDeleteLayoutItemAlertOkButtonText")];
     [deleteAlert addButtonWithTitle:ZAFGetLocalizedString(@"ConfirmDeleteLayoutItemAlertCancelButtonText")];
-    deleteAlert.messageText = [NSString stringWithFormat:
-                               ZAFGetLocalizedString(@"ConfirmDeleteLayoutItemAlertTitle"),
-                               selectedLayoutItem.name];
+    deleteAlert.messageText = ZAFGetLocalizedString(@"ConfirmDeleteLayoutItemAlertTitle");
     
     [deleteAlert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
         
