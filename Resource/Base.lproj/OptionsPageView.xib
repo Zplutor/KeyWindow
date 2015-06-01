@@ -34,8 +34,8 @@
                                 </connections>
                             </button>
                             <button translatesAutoresizingMaskIntoConstraints="NO" id="w7y-Il-a4F">
-                                <rect key="frame" x="146" y="202" width="117" height="18"/>
-                                <buttonCell key="cell" type="check" title="Launch at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GWI-rZ-kA2">
+                                <rect key="frame" x="146" y="202" width="102" height="18"/>
+                                <buttonCell key="cell" type="check" title="Start at login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="GWI-rZ-kA2">
                                     <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>

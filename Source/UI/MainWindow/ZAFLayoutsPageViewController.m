@@ -28,6 +28,8 @@ static const NSInteger kEditLayoutItemSegmentButtonIndex = 2;
 - (void)zaf_deleteLayoutItemButtonDidClick;
 - (void)zaf_editLayoutItemButtonDidClick;
 
+- (void)zaf_showFailedAlertWithTitle:(NSString*)title;
+
 @end
 
 
@@ -113,8 +115,7 @@ static const NSInteger kEditLayoutItemSegmentButtonIndex = 2;
             [_layoutItemListViewController selectLayoutItemWithIdentifier:newItem.identifier];
         }
         else {
-            
-            //TODO: 显示失败信息
+            [self zaf_showFailedAlertWithTitle:ZAFGetLocalizedString(@"AddLayoutItemFailedAlertTitle")];
         }
     }];
 }
@@ -143,6 +144,9 @@ static const NSInteger kEditLayoutItemSegmentButtonIndex = 2;
         if (isSucceeded) {
             [_layoutItemListViewController deleteSelectedLayoutItem];
         }
+        else {
+            [self zaf_showFailedAlertWithTitle:ZAFGetLocalizedString(@"DeleteLayoutItemFailedAlertTitle")];
+        }
     }];
 }
 
@@ -165,13 +169,24 @@ static const NSInteger kEditLayoutItemSegmentButtonIndex = 2;
         BOOL isSucceeded = [[ZAFRuntime defaultRuntime] updateLayoutItem:newItem];
         
         if (isSucceeded) {
-            
             [_layoutItemListViewController updateSelectedLayoutItemWithNewLayoutItem:newItem];
         }
         else {
-            
-            //TODO: 显示错误信息
+            [self zaf_showFailedAlertWithTitle:ZAFGetLocalizedString(@"EditLayoutItemFailedAlertTitle")];
         }
+    }];
+}
+
+
+- (void)zaf_showFailedAlertWithTitle:(NSString*)title {
+ 
+    NSAlert* alert = [[NSAlert alloc] init];
+    alert.alertStyle = NSWarningAlertStyle;
+    alert.messageText = title;
+    alert.informativeText = ZAFGetLocalizedString(@"OperateLayoutItemFailedAlertMessage");
+    
+    [alert beginSheetModalForWindow:self.view.window completionHandler:^(NSModalResponse returnCode) {
+        
     }];
 }
 

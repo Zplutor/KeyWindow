@@ -3,3 +3,9 @@
 "ConfirmDeleteLayoutItemAlertTitle" = "Sure to delete this item?";
 "ConfirmDeleteLayoutItemAlertOkButtonText" = "OK";
 "ConfirmDeleteLayoutItemAlertCancelButtonText" = "Cancel";
+
+"AddLayoutItemFailedAlertTitle" = "Add layout item failed.";
+"DeleteLayoutItemFailedAlertTitle" = "Delete layout item failed.";
+"EditLayoutItemFailedAlertTitle" = "Edit layout item failed.";
+
+"OperateLayoutItemFailedAlertMessage" = "Please restart application and try again.";
