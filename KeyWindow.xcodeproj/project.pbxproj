@@ -15,7 +15,6 @@
 		B788AA041AE2962D00D635D2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA021AE2962D00D635D2 /* main.m */; };
 		B788AA3B1AE3A8F400D635D2 /* ZAFRuntime.mm in Sources */ = {isa = PBXBuildFile; fileRef = B788AA3A1AE3A8F400D635D2 /* ZAFRuntime.mm */; };
 		B788AA3E1AE3A99600D635D2 /* ZAFHotKeyManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = B788AA3D1AE3A99600D635D2 /* ZAFHotKeyManager.mm */; };
-		B788AA411AE3B0A600D635D2 /* ZAFEvents.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA401AE3B0A600D635D2 /* ZAFEvents.m */; };
 		B788AA441AE3B47200D635D2 /* ZAFWindowManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA431AE3B47200D635D2 /* ZAFWindowManager.m */; };
 		B788AA5D1AE3B82D00D635D2 /* PTHotKey.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA571AE3B82D00D635D2 /* PTHotKey.m */; };
 		B788AA5E1AE3B82D00D635D2 /* PTHotKeyCenter.m in Sources */ = {isa = PBXBuildFile; fileRef = B788AA591AE3B82D00D635D2 /* PTHotKeyCenter.m */; };
@@ -44,6 +43,8 @@
 		B7C56F671B16984E00B32B14 /* AboutPageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C56F651B16984E00B32B14 /* AboutPageView.xib */; };
 		B7C56F6B1B169AF400B32B14 /* ZAFAboutPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56F6A1B169AF400B32B14 /* ZAFAboutPageViewController.m */; };
 		B7C56F731B19820400B32B14 /* ZAFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56F721B19820400B32B14 /* ZAFUtilities.m */; };
+		B7C56FA91B1CAD1F00B32B14 /* ZAFRuntimeNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56FA81B1CAD1F00B32B14 /* ZAFRuntimeNotifications.m */; };
+		B7C56FAC1B1CB42600B32B14 /* ZAFUserNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56FAB1B1CB42600B32B14 /* ZAFUserNotificationManager.m */; };
 		B7CF7F661AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CF7F641AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib */; };
 		B7FCB2B01B10254700FC3E21 /* ZAFLayoutCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */; };
 		B7FCB2B81B107A1F00FC3E21 /* ZAFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2B71B107A1F00FC3E21 /* ZAFMainWindowController.m */; };
@@ -95,8 +96,6 @@
 		B788AA3A1AE3A8F400D635D2 /* ZAFRuntime.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFRuntime.mm; path = Source/Runtime/ZAFRuntime.mm; sourceTree = "<group>"; };
 		B788AA3C1AE3A99600D635D2 /* ZAFHotKeyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFHotKeyManager.h; path = Source/Runtime/HotKey/ZAFHotKeyManager.h; sourceTree = "<group>"; };
 		B788AA3D1AE3A99600D635D2 /* ZAFHotKeyManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = ZAFHotKeyManager.mm; path = Source/Runtime/HotKey/ZAFHotKeyManager.mm; sourceTree = "<group>"; };
-		B788AA3F1AE3B0A600D635D2 /* ZAFEvents.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFEvents.h; path = Source/Runtime/ZAFEvents.h; sourceTree = "<group>"; };
-		B788AA401AE3B0A600D635D2 /* ZAFEvents.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFEvents.m; path = Source/Runtime/ZAFEvents.m; sourceTree = "<group>"; };
 		B788AA421AE3B47200D635D2 /* ZAFWindowManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFWindowManager.h; path = Source/Runtime/Window/ZAFWindowManager.h; sourceTree = "<group>"; };
 		B788AA431AE3B47200D635D2 /* ZAFWindowManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFWindowManager.m; path = Source/Runtime/Window/ZAFWindowManager.m; sourceTree = "<group>"; };
 		B788AA561AE3B82D00D635D2 /* PTHotKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PTHotKey.h; path = ThirdParty/PTHotKey/PTHotKey.h; sourceTree = "<group>"; };
@@ -151,6 +150,10 @@
 		B7C56F6A1B169AF400B32B14 /* ZAFAboutPageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFAboutPageViewController.m; path = Source/UI/MainWindow/ZAFAboutPageViewController.m; sourceTree = "<group>"; };
 		B7C56F711B19820400B32B14 /* ZAFUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFUtilities.h; path = Source/Utility/ZAFUtilities.h; sourceTree = "<group>"; };
 		B7C56F721B19820400B32B14 /* ZAFUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFUtilities.m; path = Source/Utility/ZAFUtilities.m; sourceTree = "<group>"; };
+		B7C56FA71B1CAD1F00B32B14 /* ZAFRuntimeNotifications.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFRuntimeNotifications.h; path = Source/Runtime/ZAFRuntimeNotifications.h; sourceTree = "<group>"; };
+		B7C56FA81B1CAD1F00B32B14 /* ZAFRuntimeNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFRuntimeNotifications.m; path = Source/Runtime/ZAFRuntimeNotifications.m; sourceTree = "<group>"; };
+		B7C56FAA1B1CB42600B32B14 /* ZAFUserNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFUserNotificationManager.h; path = Source/UI/ZAFUserNotificationManager.h; sourceTree = "<group>"; };
+		B7C56FAB1B1CB42600B32B14 /* ZAFUserNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFUserNotificationManager.m; path = Source/UI/ZAFUserNotificationManager.m; sourceTree = "<group>"; };
 		B7CF7F651AEB541D00C48EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/EditLayoutItemSheetWindow.xib; sourceTree = "<group>"; };
 		B7FCB2AE1B10254700FC3E21 /* ZAFLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutCellView.h; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.h; sourceTree = "<group>"; };
 		B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutCellView.m; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.m; sourceTree = "<group>"; };
@@ -255,8 +258,8 @@
 				B788AA381AE3A8B800D635D2 /* Window */,
 				B788AA391AE3A8F400D635D2 /* ZAFRuntime.h */,
 				B788AA3A1AE3A8F400D635D2 /* ZAFRuntime.mm */,
-				B788AA3F1AE3B0A600D635D2 /* ZAFEvents.h */,
-				B788AA401AE3B0A600D635D2 /* ZAFEvents.m */,
+				B7C56FA71B1CAD1F00B32B14 /* ZAFRuntimeNotifications.h */,
+				B7C56FA81B1CAD1F00B32B14 /* ZAFRuntimeNotifications.m */,
 			);
 			name = Runtime;
 			sourceTree = "<group>";
@@ -311,6 +314,8 @@
 				B7B46BBD1AEFBBA800B66654 /* Preference */,
 				B788AA841AE5596900D635D2 /* ZAFApplicationDelegate.h */,
 				B788AA851AE5596900D635D2 /* ZAFApplicationDelegate.mm */,
+				B7C56FAA1B1CB42600B32B14 /* ZAFUserNotificationManager.h */,
+				B7C56FAB1B1CB42600B32B14 /* ZAFUserNotificationManager.m */,
 				B7B46BC61AF0C62700B66654 /* ZAFUINotifications.h */,
 				B7B46BC71AF0C62700B66654 /* ZAFUINotifications.m */,
 				B7696E111B0B924B009203FC /* ZAFLocalization.h */,
@@ -538,6 +543,7 @@
 				B7FCB2B01B10254700FC3E21 /* ZAFLayoutCellView.m in Sources */,
 				B79D860B1B073B6900DC03FA /* ZAFAlignmentLinesView.m in Sources */,
 				B7C56F731B19820400B32B14 /* ZAFUtilities.m in Sources */,
+				B7C56FA91B1CAD1F00B32B14 /* ZAFRuntimeNotifications.m in Sources */,
 				B788AA811AE3BAED00D635D2 /* ZAFAxService.m in Sources */,
 				B788AA041AE2962D00D635D2 /* main.m in Sources */,
 				B7B46BC41AEFBBF600B66654 /* ZAFPreference.mm in Sources */,
@@ -552,12 +558,12 @@
 				B788AA831AE3BAED00D635D2 /* ZAFAxWindowObject.m in Sources */,
 				B788AAA31AE7D75600D635D2 /* ZAFLayoutItemStorage.m in Sources */,
 				B788AA7F1AE3BAED00D635D2 /* ZAFAxApplicationObject.m in Sources */,
+				B7C56FAC1B1CB42600B32B14 /* ZAFUserNotificationManager.m in Sources */,
 				B71A35361AFA602B00424E50 /* ZAFWindowView.mm in Sources */,
 				B7FE2E021AEB78980051E805 /* ZAFLayoutItemListViewController.m in Sources */,
 				B788AA821AE3BAED00D635D2 /* ZAFAxSystemWideObject.m in Sources */,
 				B788AA861AE5596900D635D2 /* ZAFApplicationDelegate.mm in Sources */,
 				B788AA801AE3BAED00D635D2 /* ZAFAxObject.m in Sources */,
-				B788AA411AE3B0A600D635D2 /* ZAFEvents.m in Sources */,
 				B7FCB2C51B10880F00FC3E21 /* ZAFEditLayoutItemSheetWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

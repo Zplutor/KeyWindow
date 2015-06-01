@@ -1,11 +1,14 @@
 "EmptyLayoutItemHotKeyDisplayText" = "( 无快捷键 )";
 
-"ConfirmDeleteLayoutItemAlertTitle" = "确定删除这个项吗?";
+"ConfirmDeleteLayoutItemAlertTitle" = "确定删除这个项吗？";
 "ConfirmDeleteLayoutItemAlertOkButtonText" = "确定";
 "ConfirmDeleteLayoutItemAlertCancelButtonText" = "取消";
 
-"AddLayoutItemFailedAlertTitle" = "添加布局项失败.";
-"DeleteLayoutItemFailedAlertTitle" = "删除布局项失败.";
-"EditLayoutItemFailedAlertTitle" = "编辑布局项失败.";
+"AddLayoutItemFailedAlertTitle" = "添加布局项失败。";
+"DeleteLayoutItemFailedAlertTitle" = "删除布局项失败。";
+"EditLayoutItemFailedAlertTitle" = "编辑布局项失败。";
 
-"OperateLayoutItemFailedAlertMessage" = "请重新启动程序并再次尝试.";
+"OperateLayoutItemFailedAlertMessage" = "请重新启动程序并再次尝试。";
+
+"NotTrustedNotificationTitle" = "不能改变窗口的位置和大小。";
+"NotTrustedNotificationInformativeText" = "该操作由于 “安全性与隐私” 的设置被拒绝。";

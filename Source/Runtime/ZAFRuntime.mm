@@ -1,9 +1,10 @@
 #import "ZAFRuntime.h"
 #import <Carbon/Carbon.h>
-#import "ZAFEvents.h"
+#import "ZAFAxService.h"
 #import "ZAFHotKeyManager.h"
 #import "ZAFLayoutItem.h"
 #import "ZAFLayoutItemStorage.h"
+#import "ZAFRuntimeNotifications.h"
 #import "ZAFWindowManager.h"
 
 
@@ -159,7 +160,16 @@
         return;
     }
     
-    [_windowManager moveAndResizeFocusedWindowWithFrame:layoutItem.frame];
+    BOOL isSucceeded = [_windowManager moveAndResizeFocusedWindowWithFrame:layoutItem.frame];
+    
+    if (! isSucceeded) {
+        
+        if (! [ZAFAxService isCurrentApplicationTrusted]) {
+            
+            [[NSNotificationCenter defaultCenter] postNotificationName:ZAFMoveAndResizeFocusedWindowWithouTrustedNotification
+                                                                object:self];
+        }
+    }
 }
 
 

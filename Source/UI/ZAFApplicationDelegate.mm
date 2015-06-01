@@ -4,12 +4,14 @@
 #import "ZAFPreference.h"
 #import "ZAFRuntime.h"
 #import "ZAFUINotifications.h"
+#import "ZAFUserNotificationManager.h"
 
 
 @interface ZAFApplicationDelegate () {
  
     NSStatusItem* _statusItem;
     ZAFMainWindowController* _mainWindowController;
+    ZAFUserNotificationManager* _userNotificationManager;
 }
 
 - (void)zaf_mainWindowDidClose:(NSNotification*)notificaiton;
@@ -31,6 +33,8 @@
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
     
     [[ZAFRuntime defaultRuntime] start];
+    
+    _userNotificationManager = [[ZAFUserNotificationManager alloc] init];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(zaf_showIconOnStatusBarOptionDidChange:)
@@ -124,6 +128,8 @@
 - (void)applicationWillTerminate:(NSNotification*)notification {
     
     [self zaf_hideStatusItem];
+    
+    _userNotificationManager = nil;
     
     [[ZAFRuntime defaultRuntime] terminate];
 }
