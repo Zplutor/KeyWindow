@@ -11,7 +11,7 @@
 "VBx-QT-afL.title" = "X坐标 :";
 
 /* Class = "NSBox"; title = "Layout"; ObjectID = "eqQ-s5-L1D"; */
-"eqQ-s5-L1D.title" = "布局";
+"eqQ-s5-L1D.title" = "窗口位置和大小";
 
 /* Class = "NSTextFieldCell"; title = "HotKey :"; ObjectID = "sjR-Vd-co9"; */
 "sjR-Vd-co9.title" = "快捷键 :";
