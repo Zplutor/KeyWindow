@@ -13,6 +13,8 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 
 @interface ZAFLayoutItemListViewController () <NSTableViewDelegate, NSTableViewDataSource> {
 
+    NSTextField* _watermarkLabel;
+    
     __weak id<ZAFLayoutItemListViewControllerListener> _listener;
     NSMutableArray* _layoutItems;
 }
@@ -25,6 +27,10 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 - (void)zaf_initializeLayoutCellView:(ZAFLayoutCellView*)view forLayoutFrame:(ZAFFrame*)layoutFrame;
 - (void)zaf_initializeHotKeyCellView:(NSTableCellView*)view forHotKey:(ZAFHotKey*)hotKey;
 - (void)zaf_initializeIsEffectedCellView:(NSTableCellView*)view forLayoutItemIdentifier:(NSString*)identifier;
+
+- (NSRect)zaf_watermarkLabelFrame;
+- (void)zaf_showWatermarkLabel;
+- (void)zaf_hideWatermarkLabel;
 
 @end
 
@@ -57,6 +63,18 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
     self.layoutItemTableView.delegate = self;
     self.layoutItemTableView.dataSource = self;
     self.layoutItemTableView.doubleAction = @selector(zaf_layoutItemTableViewDidDoubleClick:);
+    
+    if (_layoutItems.count == 0) {
+        [self zaf_showWatermarkLabel];
+    }
+}
+
+
+- (void)viewWillLayout {
+    
+    [super viewWillLayout];
+    
+    _watermarkLabel.frame = [self zaf_watermarkLabelFrame];
 }
 
 
@@ -67,9 +85,45 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 }
 
 
-- (void)focus {
+- (void)zaf_showWatermarkLabel {
     
-    [self.view.window makeFirstResponder:self.view];
+    if (_watermarkLabel == nil) {
+        
+        _watermarkLabel = [[NSTextField alloc] initWithFrame:[self zaf_watermarkLabelFrame]];
+        _watermarkLabel.stringValue = ZAFGetLocalizedString(@"NoLayoutItemWatermarkLabelText");
+        _watermarkLabel.editable = NO;
+        _watermarkLabel.selectable = NO;
+        _watermarkLabel.bordered = NO;
+        _watermarkLabel.textColor = [NSColor grayColor];
+        _watermarkLabel.font = [NSFont messageFontOfSize:20];
+        _watermarkLabel.alignment = NSCenterTextAlignment;
+    }
+    
+    [self.view addSubview:_watermarkLabel positioned:NSWindowAbove relativeTo:self.layoutItemTableView];
+}
+
+
+- (void)zaf_hideWatermarkLabel {
+    
+    if (_watermarkLabel != nil) {
+        
+        [_watermarkLabel removeFromSuperview];
+        _watermarkLabel = nil;
+    }
+}
+
+
+- (NSRect)zaf_watermarkLabelFrame {
+    
+    NSRect bounds = self.view.bounds;
+    
+    NSRect labelFrame = { 0 };
+    labelFrame.size.width = bounds.size.width - 50 * 2;
+    labelFrame.size.height = bounds.size.height / 2;
+    labelFrame.origin.x = (bounds.size.width - labelFrame.size.width) / 2;
+    labelFrame.origin.y = bounds.size.height / 2 - 50;
+    
+    return labelFrame;
 }
 
 
@@ -82,6 +136,12 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
 - (void)addLayoutItems:(NSArray*)layoutItems {
     
     NSParameterAssert(layoutItems != nil);
+    
+    if (layoutItems.count == 0) {
+        return;
+    }
+    
+    [self zaf_hideWatermarkLabel];
     
     NSUInteger previousCount = _layoutItems.count;
     [_layoutItems addObjectsFromArray:layoutItems];
@@ -142,11 +202,13 @@ static const NSTableViewAnimationOptions kTableViewAnimation = NSTableViewAnimat
     [self.layoutItemTableView removeRowsAtIndexes:[NSIndexSet indexSetWithIndex:selectedIndex]
                                     withAnimation:kTableViewAnimation];
     
-    //自动选择下一个项
+
     if (_layoutItems.count == 0) {
+        [self zaf_showWatermarkLabel];
         return;
     }
-    
+
+    //自动选择下一个项
     NSInteger newSelectIndex = selectedIndex;
     if (newSelectIndex == _layoutItems.count) {
         --newSelectIndex;

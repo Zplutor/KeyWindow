@@ -1,5 +1,7 @@
 "EmptyLayoutItemHotKeyDisplayText" = "( 无快捷键 )";
 
+"NoLayoutItemWatermarkLabelText" = "点击左下方的 “+” 按钮添加新的布局项";
+
 "ConfirmDeleteLayoutItemAlertTitle" = "确定删除这个项吗？";
 "ConfirmDeleteLayoutItemAlertOkButtonText" = "确定";
 "ConfirmDeleteLayoutItemAlertCancelButtonText" = "取消";

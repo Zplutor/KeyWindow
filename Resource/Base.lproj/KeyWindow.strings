@@ -1,4 +1,6 @@
-"EmptyLayoutItemHotKeyDisplayText" = "( No hot key )";
+"EmptyLayoutItemHotKeyDisplayText" = "( No shortcut )";
+
+"NoLayoutItemWatermarkLabelText" = "Click the \"+\" button at left bottom to add new layout item";
 
 "ConfirmDeleteLayoutItemAlertTitle" = "Sure to delete this item?";
 "ConfirmDeleteLayoutItemAlertOkButtonText" = "OK";

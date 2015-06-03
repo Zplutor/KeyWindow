@@ -22,7 +22,6 @@
 + (ZAFLayoutItemListViewController*)create;
 
 - (void)setSuperView:(NSView*)superView;
-- (void)focus;
 
 - (void)setListener:(id<ZAFLayoutItemListViewControllerListener>)listener;
 
