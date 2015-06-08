@@ -2,15 +2,19 @@
 #import "ZAFLoginItemService.h"
 
 
-static NSString* const kHasPromptedForTrusting = @"HasPromptedForTrusting";
+static NSString* const kIsFirstTimeLaunched = @"IsFirstTimeLaunched";
 static NSString* const kShowIconOnStatusBarKey = @"ShowIconOnStatusBar";
 
 
-@interface ZAFPreference ()
+@interface ZAFPreference () {
+    
+    BOOL _hasPromptedForTrusting;
+}
 
 - (ZAFLoginItem*)zaf_loginItemOfCurrentApplication;
 
 @end
+
 
 
 @implementation ZAFPreference
@@ -28,22 +32,24 @@ static NSString* const kShowIconOnStatusBarKey = @"ShowIconOnStatusBar";
     self = [super init];
     if (self) {
         
-        [[NSUserDefaults standardUserDefaults] registerDefaults:@{ kHasPromptedForTrusting: @(NO),
+        [[NSUserDefaults standardUserDefaults] registerDefaults:@{ kIsFirstTimeLaunched: @(YES),
                                                                    kShowIconOnStatusBarKey: @(YES) }];
+        
+        _hasPromptedForTrusting = NO;
     }
     return self;
 }
 
 
-- (BOOL)hasPromptedForTrusting {
+- (BOOL)isFistTimeLaunched {
     
-    return [[NSUserDefaults standardUserDefaults] boolForKey:kHasPromptedForTrusting];
+    return [[NSUserDefaults standardUserDefaults] boolForKey:kIsFirstTimeLaunched];
 }
 
 
-- (void)setHasPromptedForTrusting:(BOOL)hasPrompted {
+- (void)setIsFirstTimeLaunched:(BOOL)isFirstTime {
     
-    [[NSUserDefaults standardUserDefaults] setBool:hasPrompted forKey:kHasPromptedForTrusting];
+    [[NSUserDefaults standardUserDefaults] setBool:isFirstTime forKey:kIsFirstTimeLaunched];
     [[NSUserDefaults standardUserDefaults] synchronize];
 }
 
@@ -103,6 +109,15 @@ static NSString* const kShowIconOnStatusBarKey = @"ShowIconOnStatusBar";
 
     [[NSUserDefaults standardUserDefaults] setBool:show forKey:kShowIconOnStatusBarKey];
     [[NSUserDefaults standardUserDefaults] synchronize];
+}
+
+
+- (BOOL)hasPromptedForTrusting {
+    return _hasPromptedForTrusting;
+}
+
+- (void)setHasPromptedForTrusting:(BOOL)hasPrompted {
+    _hasPromptedForTrusting = hasPrompted;
 }
 
 

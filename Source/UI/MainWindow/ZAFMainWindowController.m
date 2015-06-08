@@ -1,16 +1,21 @@
 #import "ZAFMainWindowController.h"
 #import "ZAFAboutPageViewController.h"
+#import "ZAFAxService.h"
 #import "ZAFFrame.h"
 #import "ZAFLayoutItem.h"
 #import "ZAFLayoutsPageViewController.h"
 #import "ZAFLocalization.h"
 #import "ZAFOptionsPageViewController.h"
 #import "ZAFPreference.h"
+#import "ZAFPromptTrustSheetWindowController.h"
 #import "ZAFRuntime.h"
 #import "ZAFUINotifications.h"
 
 
-@interface ZAFMainWindowController () <NSWindowDelegate> {
+@interface ZAFMainWindowController () <NSWindowDelegate, ZAFPromptTrustSheetWindowControllerDelegate> {
+    
+    ZAFPromptTrustSheetWindowController* _promptTrustSheetWindowController;
+    BOOL _isPromptingTrust;
     
     ZAFLayoutsPageViewController* _layoutsPageViewController;
     ZAFOptionsPageViewController* _optionsPageViewController;
@@ -26,6 +31,7 @@
 - (IBAction)zaf_hideWindowButtonDidClick:(id)sender;
 - (IBAction)zaf_exitApplicationButtonDidClick:(id)sender;
 
+- (void)zaf_promptTrust;
 - (void)zaf_switchToPageController:(NSViewController*)controller;
 - (void)zaf_loadSubviews;
 
@@ -45,6 +51,52 @@
     
     [super windowDidLoad];
     [self zaf_loadSubviews];
+}
+
+
+- (void)windowDidBecomeKey:(NSNotification*)notification {
+    
+    if ([[ZAFPreference sharedPreference] hasPromptedForTrusting]) {
+        return;
+    }
+    
+    if (! [ZAFAxService isCurrentApplicationTrusted]) {
+    
+        _promptTrustSheetWindowController = [ZAFPromptTrustSheetWindowController create];
+        _promptTrustSheetWindowController.delegate = self;
+        
+        _isPromptingTrust = YES;
+        
+        [self.window beginSheet:_promptTrustSheetWindowController.window
+              completionHandler:^(NSModalResponse returnCode) {
+                  
+                  _promptTrustSheetWindowController = nil;
+              }
+         ];
+    }
+    
+    [[ZAFPreference sharedPreference] setHasPromptedForTrusting:YES];
+}
+
+
+- (void)promptTrustSheetWindowDidClose {
+    
+    [self.window endSheet:_promptTrustSheetWindowController.window returnCode:NSModalResponseOK];
+}
+
+
+- (void)windowDidEndSheet:(NSNotification*)notification {
+    
+    if (_isPromptingTrust) {
+        [self performSelector:@selector(zaf_promptTrust) withObject:nil afterDelay:0.1];
+        _isPromptingTrust = NO;
+    }
+}
+
+
+- (void)zaf_promptTrust {
+    
+    [ZAFAxService promptForTrustingCurrentApplicationIfNot];
 }
 
 

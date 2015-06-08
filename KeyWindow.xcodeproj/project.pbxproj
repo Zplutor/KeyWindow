@@ -45,6 +45,8 @@
 		B7C56F731B19820400B32B14 /* ZAFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56F721B19820400B32B14 /* ZAFUtilities.m */; };
 		B7C56FA91B1CAD1F00B32B14 /* ZAFRuntimeNotifications.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56FA81B1CAD1F00B32B14 /* ZAFRuntimeNotifications.m */; };
 		B7C56FAC1B1CB42600B32B14 /* ZAFUserNotificationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56FAB1B1CB42600B32B14 /* ZAFUserNotificationManager.m */; };
+		B7C56FB71B25D8CE00B32B14 /* PromptTrustSheetWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7C56FB51B25D8CE00B32B14 /* PromptTrustSheetWindow.xib */; };
+		B7C56FC41B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7C56FC31B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.m */; };
 		B7CF7F661AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = B7CF7F641AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib */; };
 		B7FCB2B01B10254700FC3E21 /* ZAFLayoutCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */; };
 		B7FCB2B81B107A1F00FC3E21 /* ZAFMainWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = B7FCB2B71B107A1F00FC3E21 /* ZAFMainWindowController.m */; };
@@ -154,6 +156,10 @@
 		B7C56FA81B1CAD1F00B32B14 /* ZAFRuntimeNotifications.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFRuntimeNotifications.m; path = Source/Runtime/ZAFRuntimeNotifications.m; sourceTree = "<group>"; };
 		B7C56FAA1B1CB42600B32B14 /* ZAFUserNotificationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFUserNotificationManager.h; path = Source/UI/ZAFUserNotificationManager.h; sourceTree = "<group>"; };
 		B7C56FAB1B1CB42600B32B14 /* ZAFUserNotificationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFUserNotificationManager.m; path = Source/UI/ZAFUserNotificationManager.m; sourceTree = "<group>"; };
+		B7C56FB61B25D8CE00B32B14 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/PromptTrustSheetWindow.xib; sourceTree = "<group>"; };
+		B7C56FBA1B25D8DE00B32B14 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/PromptTrustSheetWindow.strings"; sourceTree = "<group>"; };
+		B7C56FC21B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFPromptTrustSheetWindowController.h; path = Source/UI/PromptTrustSheetWindow/ZAFPromptTrustSheetWindowController.h; sourceTree = "<group>"; };
+		B7C56FC31B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFPromptTrustSheetWindowController.m; path = Source/UI/PromptTrustSheetWindow/ZAFPromptTrustSheetWindowController.m; sourceTree = "<group>"; };
 		B7CF7F651AEB541D00C48EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/EditLayoutItemSheetWindow.xib; sourceTree = "<group>"; };
 		B7FCB2AE1B10254700FC3E21 /* ZAFLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutCellView.h; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.h; sourceTree = "<group>"; };
 		B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutCellView.m; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.m; sourceTree = "<group>"; };
@@ -239,6 +245,7 @@
 			children = (
 				B788AA901AE69CDC00D635D2 /* Application.xib */,
 				B788AA8D1AE69CA100D635D2 /* MainWindow.xib */,
+				B7C56FB51B25D8CE00B32B14 /* PromptTrustSheetWindow.xib */,
 				B7FCB2B91B107B0E00FC3E21 /* LayoutsPageView.xib */,
 				B7C56F5B1B1628B500B32B14 /* OptionsPageView.xib */,
 				B7C56F651B16984E00B32B14 /* AboutPageView.xib */,
@@ -308,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				B7FCB2B51B1079AD00FC3E21 /* MainWindow */,
+				B7C56FBB1B25D93200B32B14 /* PromptTrustSheetWindow */,
 				B7FE2DFF1AEB786C0051E805 /* LayoutItemListView */,
 				B7FCB2BF1B10833900FC3E21 /* EditLayoutItemSheetWindow */,
 				B71A352C1AFA5EB600424E50 /* WindowLayoutView */,
@@ -399,6 +407,15 @@
 				B7B46BD41AF0DA4F00B66654 /* ZAFLoginItem.m */,
 			);
 			name = LoginItemService;
+			sourceTree = "<group>";
+		};
+		B7C56FBB1B25D93200B32B14 /* PromptTrustSheetWindow */ = {
+			isa = PBXGroup;
+			children = (
+				B7C56FC21B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.h */,
+				B7C56FC31B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.m */,
+			);
+			name = PromptTrustSheetWindow;
 			sourceTree = "<group>";
 		};
 		B7FCB2B51B1079AD00FC3E21 /* MainWindow */ = {
@@ -514,6 +531,7 @@
 			files = (
 				B7C56F5D1B1628B500B32B14 /* OptionsPageView.xib in Resources */,
 				B788AA8F1AE69CA100D635D2 /* MainWindow.xib in Resources */,
+				B7C56FB71B25D8CE00B32B14 /* PromptTrustSheetWindow.xib in Resources */,
 				B7FCB2BB1B107B0E00FC3E21 /* LayoutsPageView.xib in Resources */,
 				B71A353C1AFDDB0B00424E50 /* Images.xcassets in Resources */,
 				B788AA921AE69CDC00D635D2 /* Application.xib in Resources */,
@@ -535,6 +553,7 @@
 				B788AA5D1AE3B82D00D635D2 /* PTHotKey.m in Sources */,
 				B7C56F611B1629E600B32B14 /* ZAFOptionsPageViewController.m in Sources */,
 				B7FCB2B81B107A1F00FC3E21 /* ZAFMainWindowController.m in Sources */,
+				B7C56FC41B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.m in Sources */,
 				B7C56F6B1B169AF400B32B14 /* ZAFAboutPageViewController.m in Sources */,
 				B7B46BD21AF0D68200B66654 /* ZAFLoginItemService.mm in Sources */,
 				B788AA3B1AE3A8F400D635D2 /* ZAFRuntime.mm in Sources */,
@@ -614,6 +633,15 @@
 				B7C56F661B16984E00B32B14 /* Base */,
 			);
 			name = AboutPageView.xib;
+			sourceTree = "<group>";
+		};
+		B7C56FB51B25D8CE00B32B14 /* PromptTrustSheetWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7C56FB61B25D8CE00B32B14 /* Base */,
+				B7C56FBA1B25D8DE00B32B14 /* zh-Hans */,
+			);
+			name = PromptTrustSheetWindow.xib;
 			sourceTree = "<group>";
 		};
 		B7CF7F641AEB541D00C48EC1 /* EditLayoutItemSheetWindow.xib */ = {

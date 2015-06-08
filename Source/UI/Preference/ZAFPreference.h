@@ -5,13 +5,16 @@
 
 + (ZAFPreference*)sharedPreference;
 
-- (BOOL)hasPromptedForTrusting;
-- (void)setHasPromptedForTrusting:(BOOL)hasPrompted;
+- (BOOL)isFistTimeLaunched;
+- (void)setIsFirstTimeLaunched:(BOOL)isFirstTime;
 
 - (BOOL)launchApplicationAtLogin;
 - (void)setLaunchApplicationAtLogin:(BOOL)launch;
 
 - (BOOL)showIconOnStatusBar;
 - (void)setShowIconOnStatusBar:(BOOL)show;
+
+- (BOOL)hasPromptedForTrusting;
+- (void)setHasPromptedForTrusting:(BOOL)hasPrompted;
 
 @end

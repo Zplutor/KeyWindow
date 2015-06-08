@@ -50,10 +50,11 @@
         [self zaf_showStatusItem];
     }
     
-    if (! [[ZAFPreference sharedPreference] hasPromptedForTrusting]) {
-        [ZAFAxService promptForTrustingCurrentApplicationIfNot];
-        [[ZAFPreference sharedPreference] setHasPromptedForTrusting:YES];
+    if ([[ZAFPreference sharedPreference] isFistTimeLaunched]) {
+        [self zaf_showMainWindow];
     }
+    
+    [[ZAFPreference sharedPreference] setIsFirstTimeLaunched:NO];
 }
 
 
