@@ -160,6 +160,7 @@
 		B7C56FBA1B25D8DE00B32B14 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/PromptTrustSheetWindow.strings"; sourceTree = "<group>"; };
 		B7C56FC21B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFPromptTrustSheetWindowController.h; path = Source/UI/PromptTrustSheetWindow/ZAFPromptTrustSheetWindowController.h; sourceTree = "<group>"; };
 		B7C56FC31B25E6BD00B32B14 /* ZAFPromptTrustSheetWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFPromptTrustSheetWindowController.m; path = Source/UI/PromptTrustSheetWindow/ZAFPromptTrustSheetWindowController.m; sourceTree = "<group>"; };
+		B7C56FC81B2884AA00B32B14 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "Resource/zh-Hans.lproj/AboutPageView.strings"; sourceTree = "<group>"; };
 		B7CF7F651AEB541D00C48EC1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Resource/Base.lproj/EditLayoutItemSheetWindow.xib; sourceTree = "<group>"; };
 		B7FCB2AE1B10254700FC3E21 /* ZAFLayoutCellView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ZAFLayoutCellView.h; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.h; sourceTree = "<group>"; };
 		B7FCB2AF1B10254700FC3E21 /* ZAFLayoutCellView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ZAFLayoutCellView.m; path = Source/UI/LayoutItemListView/ZAFLayoutCellView.m; sourceTree = "<group>"; };
@@ -631,6 +632,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				B7C56F661B16984E00B32B14 /* Base */,
+				B7C56FC81B2884AA00B32B14 /* zh-Hans */,
 			);
 			name = AboutPageView.xib;
 			sourceTree = "<group>";

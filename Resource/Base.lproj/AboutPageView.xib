@@ -39,16 +39,46 @@
                     <color key="fillColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     <font key="titleFont" metaFont="system"/>
                 </box>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9Ot-X3-eLD">
+                    <rect key="frame" x="193" y="162" width="94" height="17"/>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="©2015 Zplutor" id="00e-Hx-LOd">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="urE-2g-MAv">
+                    <rect key="frame" x="154" y="88" width="142" height="14"/>
+                    <textFieldCell key="cell" controlSize="small" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Used third party libraries :" id="6Nb-x1-Yhi">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" setsMaxLayoutWidthAtFirstLayout="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uAT-Rs-Fzj">
+                    <rect key="frame" x="218" y="55" width="104" height="28"/>
+                    <textFieldCell key="cell" controlSize="small" sendsActionOnEndEditing="YES" title="ShortcutRecorder    PTHotKey" id="qsA-P4-mzW">
+                        <font key="font" metaFont="smallSystem"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
             </subviews>
             <constraints>
                 <constraint firstItem="oyZ-Qu-7fy" firstAttribute="top" secondItem="Ew3-ea-Z4e" secondAttribute="bottom" constant="8" id="0Za-jg-gmL"/>
+                <constraint firstAttribute="centerX" secondItem="urE-2g-MAv" secondAttribute="centerX" constant="15" id="68d-ic-Ddb"/>
+                <constraint firstAttribute="centerX" secondItem="uAT-Rs-Fzj" secondAttribute="centerX" constant="-30" id="7MX-KI-L7c"/>
                 <constraint firstItem="PwZ-6g-ggm" firstAttribute="leading" secondItem="c22-O7-iKe" secondAttribute="leading" constant="100" id="8tR-Tt-1SK"/>
                 <constraint firstAttribute="centerX" secondItem="Ew3-ea-Z4e" secondAttribute="centerX" id="CKl-pX-amh"/>
+                <constraint firstItem="uAT-Rs-Fzj" firstAttribute="top" secondItem="urE-2g-MAv" secondAttribute="bottom" constant="5" id="LEF-4k-WR0"/>
                 <constraint firstAttribute="centerY" secondItem="oyZ-Qu-7fy" secondAttribute="centerY" id="UhZ-o9-7BC"/>
+                <constraint firstAttribute="centerX" secondItem="9Ot-X3-eLD" secondAttribute="centerX" id="dl1-Xm-y09"/>
                 <constraint firstAttribute="centerX" secondItem="PwZ-6g-ggm" secondAttribute="centerX" id="dmm-D7-1uk"/>
+                <constraint firstAttribute="centerY" secondItem="9Ot-X3-eLD" secondAttribute="centerY" constant="-30" id="gea-Av-4HR"/>
                 <constraint firstAttribute="centerX" secondItem="oyZ-Qu-7fy" secondAttribute="centerX" id="nPz-Vz-Rv4"/>
                 <constraint firstAttribute="centerY" secondItem="PwZ-6g-ggm" secondAttribute="centerY" constant="-15" id="rks-r2-7Ot"/>
                 <constraint firstAttribute="trailing" secondItem="PwZ-6g-ggm" secondAttribute="trailing" constant="100" id="rx3-dU-yne"/>
+                <constraint firstItem="urE-2g-MAv" firstAttribute="top" secondItem="9Ot-X3-eLD" secondAttribute="bottom" constant="60" id="vqn-Gu-o1r"/>
             </constraints>
         </customView>
     </objects>
