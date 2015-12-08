@@ -39,8 +39,8 @@
     
     NSRect shownArea = [self zaf_windowShownArea];
     
-    NSRect windowFrame = NSMakeRect(shownArea.size.width * frame.xPercent,
-                                    shownArea.size.height * frame.yPercent,
+    NSRect windowFrame = NSMakeRect(shownArea.size.width * frame.xPercent + shownArea.origin.x,
+                                    shownArea.size.height * frame.yPercent + shownArea.origin.y,
                                     shownArea.size.width * frame.widthPercent,
                                     shownArea.size.height * frame.heightPercent);
     
